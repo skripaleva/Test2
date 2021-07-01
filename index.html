@@ -15,7 +15,7 @@
 <body>
     <header class="header">
         <img src="images/Logo.svg" class="header__logo" alt="logo: Crossball">
-        <div class="header__text"></div>
+<!--        <div class="header__text"></div>-->
         <nav class="header__nav">
             <a class="nav__link">Расписание</a>
             <a class="nav__link">Игровые отчёты</a>
@@ -33,7 +33,95 @@
 
     </header>
     <main>
-        <section class="search">
+        <section class="main__aside">
+            <div class="aside__card">
+                <div class="card__basic">
+                    <img src="images/Ava_red.png" class="header__avatar" alt="icon: ava">
+                    <div class="card__wrap">
+                        <div class="card__ratio">
+                            <div class="card__ratio_basic">89.40</div>
+                            <div class="card__ratio_add">999</div>
+                        </div>
+                        <div class="card__name">Елишакашвили Михо</div>
+                    </div>
+                </div>
+                <div class="card__edit">Редактировать</div>
+            </div>
+            <ul class="aside__menu">
+                <li class="menu__link menu__link_stat active">
+                    <div class="menu__link_active">Статистика</div>
+                    <ul class="aside__sub-menu">
+                        <li class="menu__link menu__link_active">Футбол</li>
+                        <li class="menu__link">Баскетбол</li>
+                        <li class="menu__link">Волейбол</li>
+                    </ul>
+                </li>
+                <li class="menu__link menu__link_next">Ближайшие игры</li>
+                <li class="menu__link menu__link_reports">Игровые отчёты</li>
+                <li class="menu__link menu__link_history">История заказов</li>
+                <li class="menu__link menu__link_exit">Выйти</li>
+            </ul>
+        </section>
+        <section class="main__content">
+            <div class="aside__card aside__card_main">
+                <div class="card__achie">
+                    <div class="card__achie-first">
+                        <div class="card__achie-left">
+                            <img src="images/Achie.png" class="header__avatar" alt="icon">
+                            <img src="images/Achie.png" class="header__avatar" alt="icon">
+                            <img src="images/Achie.png" class="header__avatar" alt="icon">
+                        </div>
+                        <div class="card__achie-right">
+                            <img src="images/Achie_mono.png" class="header__avatar" alt="icon">
+                            <img src="images/Achie_mono.png" class="header__avatar" alt="icon">
+                        </div>
+                    </div>
+                    <div class="card__achie-second">
+                        <img src="images/Achie.png" class="header__avatar" alt="icon">
+                        <img src="images/Achie.png" class="header__avatar" alt="icon">
+                        <img src="images/Achie.png" class="header__avatar" alt="icon">
+                        <img src="images/Achie.png" class="header__avatar" alt="icon">
+                        <img src="images/Achie.png" class="header__avatar" alt="icon">
+                    </div>
+                </div>
+                <div class="card__games">
+                    <div class="card__seasons">
+                        <div class="card__seasons-all">
+                            Все сезоны
+                        </div>
+                        <div class="card__seasons-last">
+                            Сезон 2020/21
+                        </div>
+                    </div>
+                    <div class="card__counts">
+                        <div class="aside__card aside__card_counts">
+                            <div class="counts__text">Игры</div>
+                            <div class="counts__number">36</div>
+                        </div>
+                        <div class="aside__card aside__card_counts">
+                            <div class="counts__text">Гол</div>
+                            <div class="counts__number">67</div>
+                        </div>
+                        <div class="aside__card aside__card_counts">
+                            <div class="counts__text">Пас</div>
+                            <div class="counts__number">136</div>
+                        </div>
+                        <div class="aside__card aside__card_counts">
+                            <div class="counts__text">Гол + пас</div>
+                            <div class="counts__number">136</div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="card__socials">
+                    <div class="card__share">Поделиться</div>
+                    <div class="card__social-icons">
+                        <img src="images/fb.svg" class="social-icon" alt="icon: facebook">
+                        <img src="images/vk.svg" class="social-icon" alt="icon: vkontakte">
+                        <img src="images/link.svg" class="social-icon" alt="icon: link">
+                    </div>
+                </div>
+            </div>
 
         </section>
     </main>

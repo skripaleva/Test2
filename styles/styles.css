@@ -15,6 +15,7 @@ body {
   background-color: #FAF9F9;
   box-sizing: border-box;
   filter: drop-shadow(0px 2px 4px #E9E9E9);
+  margin-bottom: 20px;
 }
 
 .header__nav {
@@ -22,6 +23,7 @@ body {
   display: flex;
   flex-basis: 499px;
   justify-content: space-between;
+  margin-right: 50px;
 }
 
 .header__nav:after {
@@ -79,6 +81,7 @@ body {
   width: 21px;
   height: 28px;
   margin-top: 6px;
+  margin-right: 12px;
   background: url('../images/Bag.svg');
 }
 
@@ -111,5 +114,300 @@ body {
 main {
   background-color: #FAF9F9;
   width: 100%;
-  min-height: 500px;
+  padding: 0 40px;
+  box-sizing: border-box;
+}
+
+main {
+  display: flex;
+  justify-content: space-between;
+}
+
+.main__aside {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 295px;
+  height: 800px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 2px 8px #E9E9E9;
+}
+
+.aside__card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  height: 184px;
+  padding: 20px;
+  color: #fff;
+  background: #2C2C2C linear-gradient(to right, rgba(30, 30, 40, 0), rgba(90, 96, 231, 0.35));
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+
+.card__basic {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header__avatar {
+  margin-right: 10px;
+}
+
+.card__ratio {
+  display: flex;
+  /*justify-content: space-between;*/
+}
+
+.card__ratio_basic {
+  font-size: 30px;
+  line-height: 33px;
+  margin-right: 2px;
+}
+
+.card__ratio_add {
+  position: relative;
+  width: 42px;
+  height: 16px;
+  font-size: 12px;
+  line-height: 13.2px;
+  color: #EFEFFD;
+  padding: 2px 0 0 6px;
+  background-color: #5A60E7;
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+
+.card__ratio_add:after {
+  position: absolute;
+  content: '';
+  width: 12px;
+  height: 12px;
+  background: url('../images/ratio_up.svg');
+}
+
+.card__name {
+  font-size: 20px;
+  line-height: 22px;
+}
+
+.card__edit {
+  position: relative;
+  font-size: 12px;
+  line-height: 13.2px;
+  color: #ACAFF3;
+  padding-left: 19px;
+}
+
+.card__edit:before {
+  position: absolute;
+  left: 0;
+  content: '';
+  width: 14px;
+  height: 14px;
+  background: url('../images/edit.svg');
+}
+
+.aside__menu, .aside__sub-menu {
+  list-style: none;
+ padding-left: 0;
+  margin-left: 20px;
+}
+
+.menu__link {
+  position: relative;
+  max-width: 210px;
+  font-size: 16px;
+  line-height: 22px;
+  padding: 10px 10px 10px 29px;
+  margin-bottom: 5px;
+}
+
+.aside__sub-menu .menu__link {
+  padding: 10px;
+}
+
+.menu__link_active {
+  /*height: 32px;*/
+  color: #5A60E7;
+  background-color: #EFEFFD;
+  border-radius: 5px;
+  margin-bottom: 5px;
+  padding: 10px 10px 10px 29px;
+}
+
+.menu__link_stat:before {
+  position: absolute;
+  content: '';
+  left: 0;
+  width: 24px;
+  height: 24px;
+  background: url("../images/user.svg");
+}
+.menu__link_next:before {
+  position: absolute;
+  content: '';
+  left: 0;
+  width: 24px;
+  height: 24px;
+  background: url("../images/calendar.svg");
+}
+.menu__link_reports:before {
+  position: absolute;
+  content: '';
+  left: 0;
+  width: 24px;
+  height: 24px;
+  background: url("../images/report.svg");
+}
+.menu__link_history:before {
+  position: absolute;
+  content: '';
+  left: 0;
+  width: 24px;
+  height: 24px;
+  background: url("../images/history.svg");
+}
+.menu__link_exit:before {
+  position: absolute;
+  content: '';
+  left: 0;
+  width: 24px;
+  height: 24px;
+  background: url("../images/log_out.svg");
+}
+
+.aside__menu>.menu__link:last-child {
+  margin-top: 50px;
+}
+
+.menu__link:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.main__content {
+  display: flex;
+  flex-basis: 1015px;
+}
+
+.aside__card_main {
+  flex-direction: row;
+  z-index: 0;
+}
+
+.card__achie {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 275px;
+}
+
+.card__achie-first {
+  /*position: relative;*/
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #D6D7F9;
+}
+
+/*.card__achie-first:after {*/
+/*  position: absolute;*/
+/*  content: '';*/
+/*  */
+/*}*/
+
+
+.card__games {
+  flex-basis: 440px;
+}
+
+.card__seasons {
+  display: flex;
+  flex-basis: 440px;
+  justify-content: space-between;
+  padding: 4px;
+  border: 0.5px solid #5A60E7;
+  border-radius: 5px;
+  height: 40px;
+  margin-bottom: 20px;
+  font-size: 16px;
+  line-height: 17.6px;
+  box-sizing: border-box;
+}
+
+.card__seasons div {
+  display: flex;
+  flex-basis: 210px;
+  height: 30px;
+  justify-content: center;
+  align-items: center;
+}
+
+.card__seasons-all {
+  background-color: #5A60E7;
+  border-radius: 3px;
+}
+
+.card__seasons-last {
+  color: #ACAFF3;
+}
+
+.card__counts {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.aside__card_counts {
+  position: relative;
+  width: 93px;
+  height: 73px;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.aside__card_counts::before {
+  content: "";
+  position: absolute;
+  top: -1px;
+  bottom: -1px;
+  left: -1px;
+  right: -1px;
+  background: linear-gradient(135deg, #6171FF 0, rgba(97, 113, 255, 0) 48.75%, #6171FF 100%);
+  border-radius: 7px;
+  z-index: -1;
+}
+
+.counts__text {
+  font-size: 10px;
+  line-height: 10px;
+  color: #FAF9F9;
+}
+
+.counts__number {
+  font-size: 30px;
+  line-height: 42px;
+  color: #FF795B;
+  text-align: end;
+}
+
+.card__socials {
+  flex-basis: 173px;
+  height: 150px;
+  background: url("../images/pattern.svg") no-repeat top right;
+}
+
+.card__share {
+  position: relative;
+  top: -10px;
+  font-size: 12px;
+  line-height: 13.2px;
+  color: #ACAFF3;
+}
+
+.social-icon {
+  width: 25px;
+  margin-right: 7px;
+  height: 25px;
 }
