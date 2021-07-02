@@ -133,7 +133,7 @@ main {
   box-shadow: 0px 2px 8px #E9E9E9;
 }
 
-.aside__card {
+.card {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -289,12 +289,14 @@ main {
 
 .main__content {
   display: flex;
+  flex-direction: column;
   flex-basis: 1015px;
 }
 
-.aside__card_main {
+.card__main {
   flex-direction: row;
   z-index: 0;
+  margin-bottom: 20px;
 }
 
 .card__achie {
@@ -359,7 +361,7 @@ main {
   justify-content: space-between;
 }
 
-.aside__card_counts {
+.card__count {
   position: relative;
   width: 93px;
   height: 73px;
@@ -367,7 +369,7 @@ main {
   padding: 5px;
 }
 
-.aside__card_counts::before {
+.card__count::before {
   content: "";
   position: absolute;
   top: -1px;
@@ -410,4 +412,97 @@ main {
   width: 25px;
   margin-right: 7px;
   height: 25px;
+}
+
+.content__format {
+  position: relative;
+  display: flex;
+  /*justify-content: center;*/
+  align-items: center;
+  width: 170px;
+  height: 40px;
+  padding: 9px 8px 9px 10px;
+  border-radius: 5px;
+  font-size: 16px;
+  line-height: 22.4px;
+  color: #909090;
+  background-color: #fff;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+}
+
+.content__format:after {
+  position: absolute;
+  right: 8px;
+  content: '';
+  width: 24px;
+  height: 24px;
+  background: url("../images/arrow_down.svg");
+
+}
+
+.content__table {
+  box-shadow: 0px 2px 8px #E9E9E9;
+}
+
+.table__title {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 100%;
+  height: 40px;
+  padding: 5px 20px;
+  background-color: #fff;
+  box-sizing: border-box;
+  border-bottom: 2px solid #EFEFFD;
+}
+
+
+.table__season {
+  flex-basis: 350px;
+  cursor: pointer;
+}
+
+.table__col {
+  position: relative;
+  flex-basis: 110px;
+  padding-left: 10px;
+}
+
+.table__title .table__col {
+  cursor: pointer;
+}
+
+.table__title .table__col::after, .table__title .table__col::before {
+  position: absolute;
+  left: 0;
+  content: '';
+  width: 6px;
+  height: 6px;
+}
+
+.table__title .table__col::before {
+  background: no-repeat url("../images/triangle_up.svg");
+  bottom: 8px;
+}
+
+.table__title .table__col::after {
+  bottom: 1px;
+  background: no-repeat url("../images/triangle_down.svg");
+}
+
+.table__line {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  height: 60px;
+  background-color: #fff;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.table__line:nth-child(2n) {
+  background-color: #FAF9F9;
 }
