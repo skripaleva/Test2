@@ -35,7 +35,7 @@ const createTable = ({season, quantity, goals, pass, goalsAndPass, rating}) => {
       <div class="table__col">${goals}</div>
       <div class="table__col">${pass}</div>
       <div class="table__col">${goalsAndPass}</div>
-      <div class="table__col">${rating}</div>
+      <div class="table__col table__col_blue">${rating}</div>
     `;
 
 };
@@ -65,4 +65,4 @@ function fromLess (field) {
   });
 });
 
-//todo: цифры для иконок с молнией, ховер-эффекты, адаптив, футер, псевдо-, доступность css
+//todo: ховер-эффекты, адаптив, псевдо-, доступность css

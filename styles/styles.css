@@ -15,7 +15,6 @@ body {
   background-color: #FAF9F9;
   box-sizing: border-box;
   filter: drop-shadow(0px 2px 4px #E9E9E9);
-  margin-bottom: 20px;
 }
 
 .header__nav {
@@ -85,10 +84,6 @@ body {
   background: url('../images/Bag.svg');
 }
 
-/*.header__bag {*/
-/*  position: relative;*/
-/*}*/
-
 .header__bag:after {
   position: absolute;
   top: 15px;
@@ -103,19 +98,12 @@ body {
   border-radius: 10px;
 }
 
-/*.header__filter:before {*/
-/*  position: absolute;*/
-/*  content: '';*/
-/*  width: 24px;*/
-/*  height: 24px;*/
-/*  background: url('../images/football.svg');*/
-/*}*/
-
 main {
   background-color: #FAF9F9;
   width: 100%;
   padding: 0 40px;
   box-sizing: border-box;
+  padding-top: 20px;
 }
 
 main {
@@ -145,6 +133,10 @@ main {
   background: #2C2C2C linear-gradient(to right, rgba(30, 30, 40, 0), rgba(90, 96, 231, 0.35));
   border-radius: 10px;
   box-sizing: border-box;
+}
+
+.card_aside {
+  margin-bottom: 50px;
 }
 
 .card__basic {
@@ -212,70 +204,65 @@ main {
 
 .aside__menu, .aside__sub-menu {
   list-style: none;
- padding-left: 0;
-  margin-left: 20px;
+  padding-left: 0;
+  margin: 0 0 0 20px;
 }
 
 .menu__link {
   position: relative;
   max-width: 210px;
+  /*height: 32px;*/
   font-size: 16px;
   line-height: 22px;
-  padding: 10px 10px 10px 29px;
+  padding: 5px 10px 5px 38px;
   margin-bottom: 5px;
+  /*box-sizing: border-box;*/
 }
 
 .aside__sub-menu .menu__link {
-  padding: 10px;
+  padding: 5px;
 }
 
 .menu__link_active {
-  /*height: 32px;*/
+  height: 32px;
   color: #5A60E7;
   background-color: #EFEFFD;
   border-radius: 5px;
   margin-bottom: 5px;
-  padding: 10px 10px 10px 29px;
+  padding: 5px 10px 5px 38px;
+  box-sizing: border-box;
+}
+
+.menu__link_stat {
+  padding-left: 0;
+}
+
+.menu__link_stat:before, .menu__link_next:before, .menu__link_reports:before,
+.menu__link_history:before, .menu__link_exit:before {
+  position: absolute;
+  content: '';
+  left: 8px;
+  width: 24px;
+  height: 24px;
 }
 
 .menu__link_stat:before {
-  position: absolute;
-  content: '';
-  left: 0;
-  width: 24px;
-  height: 24px;
   background: url("../images/user.svg");
 }
+
 .menu__link_next:before {
-  position: absolute;
-  content: '';
-  left: 0;
-  width: 24px;
-  height: 24px;
   background: url("../images/calendar.svg");
 }
+
 .menu__link_reports:before {
-  position: absolute;
-  content: '';
-  left: 0;
-  width: 24px;
-  height: 24px;
   background: url("../images/report.svg");
 }
+
 .menu__link_history:before {
-  position: absolute;
-  content: '';
-  left: 0;
-  width: 24px;
-  height: 24px;
   background: url("../images/history.svg");
 }
+
 .menu__link_exit:before {
-  position: absolute;
-  content: '';
-  left: 0;
-  width: 24px;
-  height: 24px;
   background: url("../images/log_out.svg");
 }
 
@@ -294,7 +281,7 @@ main {
   flex-basis: 1015px;
 }
 
-.card__main {
+.card_main {
   flex-direction: row;
   z-index: 0;
   margin-bottom: 20px;
@@ -314,27 +301,53 @@ main {
   border-bottom: 1px solid #D6D7F9;
 }
 
-.card__achie-left .header__avatar {
+.achie {
   position: relative;
+  display: inline-block;
+  width: 35px;
+  height: 40px;
+  background: url("../images/Achie.png");
 }
 
-.card__achie-left .header__avatar:after {
+.achie_black {
+  background: url("../images/Achie_mono.png");
+}
+
+.card__achie-first .achie {
+  margin-right: 15px;
+}
+
+.card__achie-first .achie:last-child {
+  margin-right: 0;
+}
+
+.card__achie-left .achie:after {
   position: absolute;
+  right: -5px;
+  top: -5px;
   content: '';
   height: 15px;
-  width: auto;
+  width: 15px;
+  font-size: 12px;
+  line-height: 13.2px;
+  color: #5A60E7;
   background-color: #fff;
+  border-radius: 10px;
+  box-sizing: border-box;
+  padding: 1px 0 0 4px;
 }
 
-.card__achie-left .header__avatar:first-child:after {
+.card__achie-left .achie:first-child:after, .card__achie-left .achie:nth-child(2):after {
   content: '5';
-}
-/*.card__achie-first:after {*/
-/*  position: absolute;*/
-/*  content: '';*/
-/*  */
-/*}*/
 
+
+}
+
+.card__achie-left .achie:last-child:after {
+  content: '99';
+  width: 25px;
+  padding: 1px 0 0 5px;
+}
 
 .card__games {
   flex-basis: 440px;
@@ -377,15 +390,15 @@ main {
   justify-content: space-between;
 }
 
-.card__count {
+.card_count {
   position: relative;
   width: 93px;
   height: 73px;
   border-radius: 5px;
-  padding: 5px;
+  padding: 9px;
 }
 
-.card__count::before {
+.card_count::before {
   content: "";
   position: absolute;
   top: -1px;
@@ -398,8 +411,8 @@ main {
 }
 
 .counts__text {
-  font-size: 10px;
-  line-height: 10px;
+  /*font-size: 10px;*/
+  /*line-height: 10px;*/
   color: #FAF9F9;
 }
 
@@ -426,7 +439,7 @@ main {
 
 .social-icon {
   width: 25px;
-  margin-right: 7px;
+  margin-right: 11px;
   height: 25px;
 }
 
@@ -468,6 +481,8 @@ main {
   align-items: flex-end;
   width: 100%;
   height: 40px;
+  font-size: 12px;
+  line-height: 13.2px;
   padding: 5px 20px;
   background-color: #fff;
   box-sizing: border-box;
@@ -476,14 +491,18 @@ main {
 
 
 .table__season {
-  flex-basis: 350px;
+  flex-basis: 450px;
   cursor: pointer;
 }
 
 .table__col {
   position: relative;
-  flex-basis: 110px;
+  flex-basis: 105px;
   padding-left: 10px;
+}
+
+.table__col_blue {
+  color: #5A60E7;
 }
 
 .table__title .table__col {
@@ -610,6 +629,8 @@ main {
 }
 
 .footer__icons {
+  display: flex;
   position: relative;
   bottom: 5px;
+  margin-right: 55px;
 }

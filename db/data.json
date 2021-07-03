@@ -5,7 +5,7 @@
     "goals": 1,
     "pass": 3,
     "goalsAndPass": 4,
-    "rating": 89.40
+    "rating": "89.40"
   },
   {
     "season": "Сезон 2020/2019",
@@ -13,7 +13,7 @@
     "goals": 2,
     "pass": 2,
     "goalsAndPass": 4,
-    "rating": 89.30
+    "rating": "89.30"
   },
   {
     "season": "Сезон 2019/2018",
@@ -21,7 +21,7 @@
     "goals": 3,
     "pass": 3,
     "goalsAndPass": 6,
-    "rating": 89.50
+    "rating": "89.50"
   },
   {
     "season": "Сезон 2018/2017",
@@ -29,7 +29,7 @@
     "goals": 4,
     "pass": 1,
     "goalsAndPass": 5,
-    "rating": 89.90
+    "rating": "89.90"
   },
   {
     "season": "Сезон 2017/2016",
@@ -37,6 +37,6 @@
     "goals": 5,
     "pass": 3,
     "goalsAndPass": 8,
-    "rating": 90.10
+    "rating": "90.10"
   }
 ]
