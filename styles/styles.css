@@ -1,5 +1,6 @@
 body {
   max-width: 1440px;
+  min-width: 320px;
   font-family: 'Proxima Nova Regular', sans-serif;
   font-weight: 400;
   margin: 0 auto;
@@ -21,7 +22,7 @@ body {
   position: relative;
   display: flex;
   flex-basis: 499px;
-  justify-content: space-between;
+  justify-content: space-around;
   margin-right: 50px;
 }
 
@@ -98,6 +99,10 @@ body {
   border-radius: 10px;
 }
 
+.header__mobile {
+  display: none;
+}
+
 main {
   background-color: #FAF9F9;
   width: 100%;
@@ -120,6 +125,7 @@ main {
   border-radius: 10px;
   box-shadow: 0px 2px 8px #E9E9E9;
   margin-bottom: 247px;
+  margin-right: 20px;
 }
 
 .card {
@@ -144,7 +150,7 @@ main {
   justify-content: space-between;
 }
 
-.header__avatar {
+.main__avatar {
   margin-right: 10px;
 }
 
@@ -287,14 +293,18 @@ main {
   margin-bottom: 20px;
 }
 
+.card__achie-left {
+  margin-right: 20px;
+}
+
 .card__achie {
   display: flex;
   flex-direction: column;
   flex-basis: 275px;
+  margin-right: 10px;
 }
 
 .card__achie-first {
-  /*position: relative;*/
   display: flex;
   justify-content: space-between;
   margin-bottom: 15px;
@@ -351,6 +361,7 @@ main {
 
 .card__games {
   flex-basis: 440px;
+  margin-right: 10px;
 }
 
 .card__seasons {
@@ -396,6 +407,11 @@ main {
   height: 73px;
   border-radius: 5px;
   padding: 9px;
+  margin-right: 8px;
+}
+
+.card_count:last-child {
+  margin-right: 0;
 }
 
 .card_count::before {
@@ -560,6 +576,11 @@ main {
   margin-bottom: 64px;
 }
 
+.footer__contacts {
+  margin-right: 40px;
+  /*flex-basis: 300px;*/
+}
+
 .contacts__logo {
   margin-bottom: 30px;
 }
@@ -611,7 +632,13 @@ main {
   display: flex;
   justify-content: space-between;
   flex-basis: 800px;
+  flex-wrap: wrap;
   margin-right: 96px;
+}
+
+.structure__col {
+  margin-right: 20px;
+  flex-basis: 150px;
 }
 
 .structure__title {
@@ -633,4 +660,371 @@ main {
   position: relative;
   bottom: 5px;
   margin-right: 55px;
+}
+
+@media (max-width: 1300px) {
+  .footer__structure {
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 1250px) {
+  .header__nav {
+    flex-basis: 450px;
+  }
+
+  .header__right{
+    flex-basis: 250px;
+  }
+  
+  main {
+    position: relative;
+  }
+
+  .card__games {
+    margin-right: 0;
+  }
+
+  .card__socials {
+    position: absolute;
+    width: 100px;
+    height: 45px;
+    top: 140px;
+    left: 190px;
+    background: none;
+  }
+
+  .social-icon {
+    margin-right: 5px;
+  }
+
+  .table__season {
+    flex-basis: 350px;
+  }
+
+  .footer__contacts {
+    min-width: 290px;
+  }
+
+  .footer__structure {
+    flex-basis: 700px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .header {
+    padding: 0 20px;
+  }
+
+  .header__logo {
+    width: 140px;
+  }
+
+  .header__right{
+    flex-basis: 130px;
+  }
+
+  .header__avatar {
+    display: none;
+  }
+
+  main {
+    padding: 20px 20px 0;
+  }
+
+  .card__games {
+    flex-basis: 300px;
+  }
+
+  .card_count {
+    width: 67.5px;
+    height: 60px;
+  }
+
+  .counts__text {
+     font-size: 12px;
+     line-height: 13.2px;
+  }
+
+  .counts__number {
+    font-size: 20px;
+    line-height: 22px;
+  }
+
+  .table__season {
+    flex-basis: 250px;
+  }
+
+  .footer {
+    padding: 30px 20px 20px;
+  }
+
+  .footer__contacts {
+    min-width: 225px;
+  }
+
+  .contacts__banners img {
+    width: 105px;
+    height: 30px;
+  }
+
+
+}
+
+@media (max-width: 900px) {
+  .header__nav {
+    flex-basis: 400px;
+  }
+
+  .header__right{
+    flex-basis: 35px;
+  }
+
+  .header__filter {
+    display: none;
+  }
+
+  .main__aside {
+    flex-basis: 340px;
+  }
+
+  .card {
+    padding: 10px;
+  }
+
+  .card_aside {
+    height: 280px;
+    padding: 40px 20px;
+  }
+
+  .card__socials {
+    top: 215px;
+    left: 200px;
+  }
+
+  .main__content {
+    flex-basis: 490px;
+  }
+
+  .card_main {
+    height: 280px;
+    flex-direction: column;
+  }
+
+  .card__achie {
+    order: 2;
+  }
+
+  .card__text {
+    font-size: 14px;
+    line-height: 15.4px;
+    color: #909090;
+    margin-bottom: 6px;
+  }
+
+  .card__games {
+    margin-bottom: 20px;
+  }
+
+  .card_count {
+    flex-basis: 100px;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    height: 60px;
+  }
+
+  .header__nav {
+    display: none;
+  }
+
+  .header__right{
+    display: none;
+  }
+
+  .header__mobile {
+    display: block;
+  }
+
+  .header__bag-mob {
+    margin-right: 20px;
+  }
+
+  .header__burger {
+    position: relative;
+    top: -3px;
+  }
+
+  main {
+    padding: 0;
+  }
+  
+  .main__aside {
+    margin-right: 10px;
+  }
+
+  .card_aside {
+    padding: 40px 10px;
+  }
+
+  .card__socials {
+    top: 195px;
+    left: 160px;
+  }
+
+  .content__table {
+    min-width: 430px;
+    overflow-x: scroll;
+  }
+
+  .footer__icons {
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 650px) {
+  .main__aside {
+    flex-basis: 250px;
+  }
+  .card__socials {
+    left: 140px;
+  }
+
+  .footer__contacts {
+    margin-right: 0;
+    text-align: center;
+  }
+
+  .footer__top {
+    justify-content: center;
+    margin-bottom: 80px;
+  }
+
+  .contacts__banners img {
+    width: 137px;
+    height: 40px;
+  }
+
+  .contacts__bottom {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .footer__text_blue {
+    display: none;
+  }
+
+  .contacts__phone {
+    margin-right: 20px;
+  }
+
+  .footer__structure {
+    display: none;
+  }
+
+  .footer__bottom {
+    position: relative;
+    flex-direction: column;
+  }
+
+  .footer__icons {
+    position: absolute;
+    top: -100px;
+  }
+}
+
+@media (max-width: 570px) {
+  main {
+    flex-direction: column;
+    padding: 0 20px;
+  }
+
+  .main__aside {
+    margin-right: 0;
+    height: auto;
+    margin-bottom: 20px;
+  }
+
+  .card_aside {
+    align-items: flex-start;
+    height: 155px;
+    padding: 20px 10px 19px;
+    margin-bottom: 15px;
+  }
+
+  .main__avatar {
+    margin-right: 50px;
+  }
+
+  .card__socials {
+    top: 100px;
+    left: 255px;
+  }
+
+  .aside__menu {
+    display: flex;
+    overflow-x: scroll;
+    margin-left: 10px;
+    /*margin-bottom: 20px;*/
+  }
+
+  .aside__menu>.menu__link:last-child {
+    display: none;
+  }
+
+  .menu__link {
+    padding-right: 5px;
+  }
+
+  .menu__link_active {
+
+    background-color: #fff;
+  }
+
+  .aside__sub-menu .menu__link {
+    color: #909090;
+  }
+
+  .menu__link_mobile {
+    width: 180px;
+    height: 40px;
+    background-color: #5A60E7;
+    color: #fff;
+  }
+
+  .menu__link_stat:before {
+    background: url("../images/chart.svg");
+  }
+}
+
+@media (max-width: 375px) {
+  .header {
+    height: 60px;
+    padding-left: 10px;
+  }
+
+  .header__logo {
+    width: 120px;
+    height: 20px;
+  }
+
+  main {
+    padding: 0;
+  }
+
+  .main__avatar {
+    margin-right: 10px;
+  }
+
+  .card_aside, .card_main {
+    border-radius: 0;
+  }
+}
+
+@media (max-width: 355px) {
+  .card__socials {
+    left: 210px;
+  }
 }
