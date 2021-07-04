@@ -240,10 +240,10 @@ main {
 }
 
 .menu__link_stat {
-  padding-left: 0;
+  /*padding-left: 0;*/
 }
 
-.menu__link_stat:before, .menu__link_stat div:after, .menu__link_next:before, .menu__link_reports:before,
+.menu__link_stat:before, .menu__link_stat:after, .menu__link_next:before, .menu__link_reports:before,
 .menu__link_history:before, .menu__link_exit:before {
   position: absolute;
   content: '';
@@ -256,7 +256,7 @@ main {
   background: url("../images/user.svg");
 }
 
-.menu__link_stat div:after {
+.menu__link_stat:after {
   width: 7px;
   height: 7px;
   border-top: 2px solid #ACAFF3;
@@ -264,7 +264,7 @@ main {
   transform: rotate(135deg);
   /*margin-right: 10px;*/
   /*transform: rotate(180deg);*/
-  top: 15px;
+  top: 10px;
   left: 185px;
 }
 
@@ -288,6 +288,10 @@ main {
   display: none;
 }
 
+.aside__sub-menu .menu__link {
+  max-width: 190px;
+}
+
 .nav_trigger {
   position: absolute;
   top: -9999px;
@@ -298,9 +302,9 @@ main {
   display: block;
 }
 
-.nav_trigger:checked ~ label div.menu__link_active:after {
+.nav_trigger:checked ~ label .menu__link_active:after {
   transform: rotate(-45deg);
-  top: 19px;
+  top: 15px;
 }
 
 .aside__menu>.menu__link:last-child {
@@ -308,7 +312,7 @@ main {
 }
 
 .menu__link:last-child {
-  margin-bottom: 0;
+  /*margin-bottom: 0;*/
   padding-bottom: 0;
 }
 
@@ -826,6 +830,7 @@ main {
   .card_aside {
     height: 280px;
     padding: 40px 20px;
+    margin-bottom: 30px;
   }
 
   .card__socials {
@@ -975,6 +980,7 @@ main {
   .main__aside {
     margin-right: 0;
     height: auto;
+    max-height: 240px;
     margin-bottom: 20px;
     background-color: #FAF9F9;
     box-shadow: none;
@@ -984,7 +990,7 @@ main {
     align-items: flex-start;
     height: 155px;
     padding: 20px 10px 19px;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
   }
 
   .main__avatar {
@@ -1007,7 +1013,9 @@ main {
     display: none;
   }
 
-  .menu__link {
+  /*.aside__menu > .menu__link, label > .menu__link {*/
+
+  .aside__menu > .menu__link {
     padding-right: 5px;
     margin-bottom: 0;
     background-color: #fff;
@@ -1036,6 +1044,7 @@ main {
     height: 40px;
     background-color: #5A60E7;
     color: #fff;
+    margin-right: 10px;
   }
 
   .aside__sub-menu {
@@ -1045,9 +1054,9 @@ main {
     background-color: #fff;
     overflow-y: visible;
     z-index: 1;
-    border-radius: 0 0 5px 5px;
+    border-radius: 5px;
     left: 10px;
-    top: 215px;
+    top: 216px;
     box-sizing: border-box;
     padding: 10px;
   }

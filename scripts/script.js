@@ -5,7 +5,13 @@ const goal  = document.querySelector('.table__goal');
 const pass  = document.querySelector('.table__pass');
 const goalsAndPass  = document.querySelector('.table__goal-pass');
 const rating  = document.querySelector('.table__rating');
+const menu  = document.querySelector('.aside__menu');
+const navTrigger  = document.getElementById('nav_trigger');
 switcher = 0;
+
+menu.addEventListener('scroll', () => {
+  navTrigger.checked = false;
+});
 
 
 const getData = async (url) => {
