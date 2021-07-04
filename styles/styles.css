@@ -243,7 +243,7 @@ main {
   padding-left: 0;
 }
 
-.menu__link_stat:before, .menu__link_next:before, .menu__link_reports:before,
+.menu__link_stat:before, .menu__link_stat div:after, .menu__link_next:before, .menu__link_reports:before,
 .menu__link_history:before, .menu__link_exit:before {
   position: absolute;
   content: '';
@@ -254,6 +254,18 @@ main {
 
 .menu__link_stat:before {
   background: url("../images/user.svg");
+}
+
+.menu__link_stat div:after {
+  width: 7px;
+  height: 7px;
+  border-top: 2px solid #ACAFF3;
+  border-right: 2px solid #ACAFF3;
+  transform: rotate(135deg);
+  /*margin-right: 10px;*/
+  /*transform: rotate(180deg);*/
+  top: 15px;
+  left: 185px;
 }
 
 .menu__link_next:before {
@@ -270,6 +282,25 @@ main {
 
 .menu__link_exit:before {
   background: url("../images/log_out.svg");
+}
+
+.aside__sub-menu {
+  display: none;
+}
+
+.nav_trigger {
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+}
+
+.nav_trigger:checked ~ li .aside__sub-menu {
+  display: block;
+}
+
+.nav_trigger:checked ~ label div.menu__link_active:after {
+  transform: rotate(-45deg);
+  top: 19px;
 }
 
 .aside__menu>.menu__link:last-child {
@@ -945,6 +976,8 @@ main {
     margin-right: 0;
     height: auto;
     margin-bottom: 20px;
+    background-color: #FAF9F9;
+    box-shadow: none;
   }
 
   .card_aside {
@@ -976,6 +1009,17 @@ main {
 
   .menu__link {
     padding-right: 5px;
+    margin-bottom: 0;
+    background-color: #fff;
+    border-radius: 5px;
+    margin-right: 10px;
+    height: 40px;
+    box-sizing: border-box;
+
+  }
+
+  .menu__link_history {
+    margin-right: 0;
   }
 
   .menu__link_active {
@@ -992,6 +1036,24 @@ main {
     height: 40px;
     background-color: #5A60E7;
     color: #fff;
+  }
+
+  .aside__sub-menu {
+    position: absolute;
+    width: 180px;
+    height: 117px;
+    background-color: #fff;
+    overflow-y: visible;
+    z-index: 1;
+    border-radius: 0 0 5px 5px;
+    left: 10px;
+    top: 215px;
+    box-sizing: border-box;
+    padding: 10px;
+  }
+
+  .menu__link_active.menu__link_mobile:after {
+    left: 155px;
   }
 
   .menu__link_stat:before {
