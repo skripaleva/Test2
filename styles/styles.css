@@ -10,19 +10,19 @@ body {
 }
 
 .header {
-  background-color: #FAF9F9;
   position: relative;
+  background-color: #FAF9F9;
   box-shadow: 0 2px 4px #E9E9E9;
   z-index: 1;
 }
 
 .header .wrap {
-  max-width: 1440px;
-  width: 100%;
-  height: 80px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  max-width: 1440px;
+  width: 100%;
+  height: 80px;
   padding: 0 40px;
   box-sizing: border-box;
 }
@@ -50,11 +50,11 @@ body {
 }
 
 .nav__link:last-child {
+  position: relative;
+  top: -3px;
   width: 24px;
   height: 24px;
   background: url('../images/arrow_down.svg');
-  position: relative;
-  top: -3px;
 }
 
 
@@ -67,9 +67,9 @@ body {
 
 .header__filter {
   position: relative;
-  background-color: #fff;
   width: 70px;
   height: 40px;
+  background-color: #fff;
   transition: 0.5s;
 }
 
@@ -95,10 +95,10 @@ body {
   position: relative;
   width: 21px;
   height: 28px;
-  margin-top: 6px;
-  margin-right: 12px;
   background: url('../images/Bag.svg');
   transition: 0.5s;
+  margin-top: 6px;
+  margin-right: 12px;
 }
 
 .header__bag:hover {
@@ -112,9 +112,9 @@ body {
   left: 12px;
   content: '1';
   font-size: 12px;
-  padding: 1px 0 0 5px;
   width: 11px;
   height: 14px;
+  padding: 1px 0 0 5px;
   color: #fff;
   background-color: #86E3CE;
   border-radius: 10px;
@@ -132,8 +132,8 @@ main .wrap{
   display: flex;
   justify-content: space-between;
   width: 100%;
-  box-sizing: border-box;
   padding: 20px 40px 0;
+  box-sizing: border-box;
 }
 
 .main__aside {
@@ -267,9 +267,9 @@ main .wrap{
   color: #5A60E7;
   background-color: #EFEFFD;
   border-radius: 5px;
-  margin-bottom: 5px;
   padding: 5px 10px 5px 38px;
   box-sizing: border-box;
+  margin-bottom: 5px;
 }
 
 .menu__link_stat::before, .menu__link_stat::after, .menu__link_next::before, .menu__link_reports::before,
@@ -286,13 +286,13 @@ main .wrap{
 }
 
 .menu__link_stat::after {
+  top: 10px;
+  left: 185px;
   width: 7px;
   height: 7px;
   border-top: 2px solid #ACAFF3;
   border-right: 2px solid #ACAFF3;
   transform: rotate(135deg);
-  top: 10px;
-  left: 185px;
 }
 
 .menu__link_next::before {
@@ -410,11 +410,11 @@ main .wrap{
   width: 15px;
   font-size: 12px;
   line-height: 13.2px;
+  padding: 1px 0 0 4px;
   color: #5A60E7;
   background-color: #fff;
   border-radius: 10px;
   box-sizing: border-box;
-  padding: 1px 0 0 4px;
 }
 
 .card__achie-left .achie:first-child::after, .card__achie-left .achie:nth-child(2)::after {
@@ -436,22 +436,22 @@ main .wrap{
   display: flex;
   flex-basis: 440px;
   justify-content: space-between;
+  height: 40px;
   padding: 4px;
   border: 0.5px solid #5A60E7;
   border-radius: 5px;
-  height: 40px;
-  margin-bottom: 20px;
   font-size: 16px;
   line-height: 17.6px;
   box-sizing: border-box;
+  margin-bottom: 20px;
 }
 
 .card__seasons div {
   display: flex;
   flex-basis: 210px;
-  height: 30px;
   justify-content: center;
   align-items: center;
+  height: 30px;
   transition: 0.5s;
 }
 
@@ -479,8 +479,8 @@ main .wrap{
   position: relative;
   width: 93px;
   height: 73px;
-  border-radius: 5px;
   padding: 9px;
+  border-radius: 5px;
   margin-right: 8px;
 }
 
@@ -527,8 +527,8 @@ main .wrap{
 
 .social-icon {
   width: 25px;
-  margin-right: 11px;
   height: 25px;
+  margin-right: 11px;
 }
 
 .content__format {
@@ -563,11 +563,11 @@ main .wrap{
 }
 
 .content__table {
-  box-shadow: 0 2px 8px #E9E9E9;
   font-size: 16px;
   line-height: 17.6px;
-  border-radius: 0 0 10px 10px;
   padding-bottom: 10px;
+  border-radius: 0 0 10px 10px;
+  box-shadow: 0 2px 8px #E9E9E9;
   box-sizing: border-box;
 }
 
@@ -582,8 +582,8 @@ main .wrap{
   line-height: 13.2px;
   padding: 5px 0 5px 20px;
   background-color: #fff;
-  box-sizing: border-box;
   border-bottom: 2px solid #EFEFFD;
+  box-sizing: border-box;
 }
 
 .table__season {
@@ -637,8 +637,8 @@ main .wrap{
   justify-content: space-between;
   width: 100%;
   height: 60px;
-  background-color: #fff;
   padding: 20px 0 20px 20px;
+  background-color: #fff;
   box-sizing: border-box;
 }
 
@@ -662,11 +662,11 @@ main .wrap{
 .footer .wrap {
   min-height: 400px;
   width: 100%;
-  color: #fff;
   padding: 50px 40px 20px;
-  box-sizing: border-box;
   font-size: 16px;
   line-height: 17.6px;
+  color: #fff;
+  box-sizing: border-box;
 }
 
 .footer__top {
@@ -709,8 +709,8 @@ main .wrap{
 }
 
 .contacts__phone, .contacts__mail {
-  display: block;
   position: relative;
+  display: block;
   padding-left: 34px;
   text-decoration: none;
   color: #fff;
@@ -748,9 +748,9 @@ main .wrap{
 }
 
 .structure__col {
-  margin-right: 20px;
   flex-basis: 150px;
   margin-bottom: 15px;
+  margin-right: 20px;
 }
 
 .structure__title {
@@ -774,9 +774,9 @@ main .wrap{
 }
 
 .footer__icons {
-  display: flex;
   position: relative;
   bottom: 5px;
+  display: flex;
   margin-right: 55px;
 }
 
@@ -808,45 +808,41 @@ main .wrap{
     position: relative;
   }
 
-/*  .card__games {*/
-/*    margin-right: 0;*/
-/*  }*/
+  .card__games {
+    margin-right: 0;
+  }
 
-/*  .card__socials {*/
-/*    position: absolute;*/
-/*    width: 100px;*/
-/*    height: 45px;*/
-/*    top: 140px;*/
-/*    left: 190px;*/
-/*    background: none;*/
-/*  }*/
+  .card__socials {
+    position: absolute;
+    width: 100px;
+    height: 45px;
+    top: 140px;
+    left: 190px;
+    background: none;
+  }
 
-/*  .social-icon {*/
-/*    margin-right: 5px;*/
-/*  }*/
+  .social-icon {
+    margin-right: 5px;
+  }
 
-/*  .social-icon:hover {*/
-/*    cursor: pointer;*/
-/*  }*/
+  .social-icon:hover {
+    cursor: pointer;
+  }
 
-/*  .table__season {*/
-/*    flex-basis: 350px;*/
-/*  }*/
+  .table__season {
+    flex-basis: 350px;
+  }
 
-/*  .footer__contacts {*/
-/*    min-width: 290px;*/
-/*  }*/
+  .footer__contacts {
+    min-width: 290px;
+  }
 
-/*  .footer__structure {*/
-/*    flex-basis: 700px;*/
-/*  }*/
+  .footer__structure {
+    flex-basis: 700px;
+  }
 }
 
 @media (max-width: 1024px) {
-  .header {
-    /*padding: 0 20px;*/
-  }
-
   .header .wrap {
     padding: 0 20px;
   }
@@ -945,8 +941,8 @@ main .wrap{
   }
 
   .card_main {
-    height: 260px;
     flex-direction: column;
+    height: 260px;
   }
 
   .card__achie {
@@ -995,6 +991,10 @@ main .wrap{
 }
 
 @media (max-width: 768px) {
+  .header {
+    z-index: 0;
+  }
+
   .header .wrap {
     height: 60px;
   }
@@ -1013,11 +1013,23 @@ main .wrap{
 
   .header__bag-mob {
     margin-right: 20px;
+    transition: 0.5s;
+  }
+
+  .header__bag-mob:hover {
+    cursor: pointer;
+    opacity: 0.8;
   }
 
   .header__burger {
     position: relative;
     top: -3px;
+    transition: 0.5s;
+  }
+
+  .header__burger:hover {
+    cursor: pointer;
+    opacity: 0.8;
   }
 
   main .wrap {
@@ -1111,12 +1123,12 @@ main .wrap{
   }
 
   .main__aside {
-    margin-right: 0;
     height: auto;
     max-height: 235px;
-    margin-bottom: 0;
     background-color: #FAF9F9;
     box-shadow: none;
+    margin-right: 0;
+    margin-bottom: 0;
   }
 
   .card_aside {
@@ -1146,14 +1158,14 @@ main .wrap{
   }
 
   .aside__menu > .menu__link{
+    height: 40px;
     padding-right: 5px;
-    margin-bottom: 0;
+    padding-top: 8px;
     background-color: #fff;
     border-radius: 5px;
-    margin-right: 10px;
-    height: 40px;
     box-sizing: border-box;
-    padding-top: 8px;
+    margin-right: 10px;
+    margin-bottom: 0;
   }
 
   label > .menu__link {
@@ -1182,14 +1194,14 @@ main .wrap{
 
   .aside__sub-menu {
     position: absolute;
+    left: 20px;
+    top: 216px;
     width: 180px;
     height: 117px;
     background-color: #fff;
     overflow-y: visible;
     z-index: 1;
     border-radius: 5px;
-    left: 20px;
-    top: 216px;
     box-sizing: border-box;
     padding: 10px;
     margin-left: 0;
@@ -1220,8 +1232,8 @@ main .wrap{
   }
 
   .content__table {
-    margin-bottom: 363px;
     border-radius: 0 0 5px 5px;
+    margin-bottom: 363px;
   }
 
   .table__title {
@@ -1338,8 +1350,8 @@ main .wrap{
 
   .contacts__phone {
     order: 1;
-    margin-right: 0;
     padding-left: 0;
+    margin-right: 0;
   }
 
   .contacts__mail {
