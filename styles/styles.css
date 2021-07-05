@@ -25,30 +25,35 @@ body {
 }
 
 .header__nav {
-  position: relative;
   display: flex;
   flex-basis: 499px;
   justify-content: space-around;
   margin-right: 50px;
 }
 
-.header__nav::after {
-  position: absolute;
-  right: -30px;
-  top: -3px;
-  content: '';
-  width: 24px;
-  height: 24px;
-  background: url('../images/arrow_down.svg');
-}
 
 .nav__link {
   font-size: 16px;
+  transition: 0.5s;
+}
+
+.nav__link:hover {
+  cursor: pointer;
+  opacity: 0.8;
 }
 
 .nav__link:first-child {
   text-shadow: black 0 0 1px, 0 4px 4px rgba(0, 0, 0, 0.25);
 }
+
+.nav__link:last-child {
+  width: 24px;
+  height: 24px;
+  background: url('../images/arrow_down.svg');
+  position: relative;
+  top: -3px;
+}
+
 
 .header__right {
   display: flex;
@@ -62,6 +67,12 @@ body {
   background-color: #fff;
   width: 70px;
   height: 40px;
+  transition: 0.5s;
+}
+
+.header__filter:hover {
+  cursor: pointer;
+  opacity: 0.8;
 }
 
 .filter_football {
@@ -84,6 +95,12 @@ body {
   margin-top: 6px;
   margin-right: 12px;
   background: url('../images/Bag.svg');
+  transition: 0.5s;
+}
+
+.header__bag:hover {
+  cursor: pointer;
+  opacity: 0.8;
 }
 
 .header__bag::after {
@@ -200,6 +217,12 @@ main .wrap{
   line-height: 13.2px;
   color: #ACAFF3;
   padding-left: 19px;
+  transition: 0.5s;
+}
+
+.card__edit:hover {
+  cursor: pointer;
+  opacity: .8;
 }
 
 .card__edit::before {
@@ -224,6 +247,12 @@ main .wrap{
   line-height: 22.4px;
   padding: 5px 10px 5px 38px;
   margin-bottom: 5px;
+  transition: 0.5s;
+}
+
+.menu__link:hover {
+  cursor: pointer;
+  opacity: .8;
 }
 
 .aside__sub-menu .menu__link {
@@ -420,6 +449,7 @@ main .wrap{
   height: 30px;
   justify-content: center;
   align-items: center;
+  transition: 0.5s;
 }
 
 .card__seasons-all {
@@ -429,6 +459,11 @@ main .wrap{
 
 .card__seasons-last {
   color: #ACAFF3;
+}
+
+.card__seasons-all:hover, .card__seasons-last:hover {
+  cursor: pointer;
+  opacity: .8;
 }
 
 .card__counts {
@@ -507,6 +542,12 @@ main .wrap{
   background-color: #fff;
   box-sizing: border-box;
   margin-bottom: 20px;
+  transition: 0.5s;
+}
+
+.content__format:hover {
+  cursor: pointer;
+  opacity: .8;
 }
 
 .content__format::after {
@@ -544,7 +585,15 @@ main .wrap{
 
 .table__season {
   flex-basis: 450px;
+}
+
+.table__title div {
+  transition: 0.5s;
+}
+
+.table__title div:hover {
   cursor: pointer;
+  opacity: 0.8;
 }
 
 .table__col {
@@ -636,6 +685,10 @@ main .wrap{
   margin-bottom: 50px;
 }
 
+.contacts__banners img {
+  cursor: pointer;
+}
+
 .contacts__banner {
   margin-right: 10px;
 }
@@ -653,8 +706,17 @@ main .wrap{
 }
 
 .contacts__phone, .contacts__mail {
+  display: block;
   position: relative;
   padding-left: 34px;
+  text-decoration: none;
+  color: #fff;
+  transition: 0.5s;
+}
+
+.contacts__phone:hover, .contacts__mail:hover {
+  cursor: pointer;
+  opacity: .8;
 }
 
 .contacts__phone::before, .contacts__mail::before {
@@ -694,6 +756,12 @@ main .wrap{
 
 .structure__link {
   margin-bottom: 10px;
+  transition: 0.5s;
+}
+
+.structure__link:hover {
+  cursor: pointer;
+  opacity: .8;
 }
 
 .footer__bottom {
@@ -707,6 +775,15 @@ main .wrap{
   position: relative;
   bottom: 5px;
   margin-right: 55px;
+}
+
+.footer__icons img {
+  transition: 0.5s;
+}
+
+.footer__icons img:hover {
+  cursor: pointer;
+  opacity: .8;
 }
 
 @media (max-width: 1310px) {
@@ -743,6 +820,10 @@ main .wrap{
 
   .social-icon {
     margin-right: 5px;
+  }
+
+  .social-icon:hover {
+    cursor: pointer;
   }
 
   .table__season {

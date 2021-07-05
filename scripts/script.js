@@ -98,5 +98,3 @@ function fromLess (field) {
     });
   });
 });
-
-//todo: ховер-эффекты, доступность css,
