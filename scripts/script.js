@@ -6,8 +6,29 @@ const pass  = document.querySelector('.table__pass');
 const goalsAndPass  = document.querySelector('.table__goal-pass');
 const rating  = document.querySelector('.table__rating');
 const menu  = document.querySelector('.aside__menu');
+const tableGoal  = document.querySelector('.table__goal');
+const tablePass  = document.querySelector('.table__pass');
+const tableGoalPass  = document.querySelector('.table__goal-pass');
+const tableRating  = document.querySelector('.table__rating');
 const navTrigger  = document.getElementById('nav_trigger');
-switcher = 0;
+let clientWidth = document.documentElement.clientWidth;
+
+switcher = {
+  seasons: false,
+  tableQuantity: false,
+  goal: false,
+  pass: false,
+  goalsAndPass: false,
+  rating: false
+};
+
+if (clientWidth <= 900) {
+  tableQuantity.innerText = "И";
+  tableGoal.innerText = 'Г';
+  tablePass.innerText = 'П';
+  tableGoalPass.innerText = 'Г+П';
+  tableRating.innerText = '';
+}
 
 menu.addEventListener('scroll', () => {
   navTrigger.checked = false;
@@ -60,9 +81,9 @@ function fromLess (field) {
 
 [seasons, tableQuantity, goal, pass, goalsAndPass, rating].forEach((value) => {
   value.addEventListener('click', () => {
-    switcher = !switcher;
+    switcher.value = !switcher.value;
     getData('./db/data.json').then(data => {
-      if(switcher) {
+      if(switcher.value) {
         data.sort(fromMore(value.dataset.index)).forEach(createTable)
       } else {
         data.sort(fromLess(value.dataset.index)).forEach(createTable)
@@ -71,4 +92,4 @@ function fromLess (field) {
   });
 });
 
-//todo: ховер-эффекты, адаптив, псевдо-, доступность css, стрелка, сворачивание подменю, заголовки таблицы - адаптив
+//todo: ховер-эффекты, доступность css,

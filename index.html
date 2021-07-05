@@ -14,184 +14,190 @@
 </head>
 <body>
     <header class="header">
-        <img src="images/Logo.svg" class="header__logo" alt="logo: Crossball">
-        <nav class="header__nav">
-            <a class="nav__link">Расписание</a>
-            <a class="nav__link">Игровые отчёты</a>
-            <a class="nav__link">Статистика</a>
-            <a class="nav__link">Ещё</a>
-        </nav>
-        <div class="header__right">
-            <div class="header__filter">
-                <img src="images/football.svg" class="filter_football" alt="icon: football">
+        <div class="wrap">
+            <img src="images/Logo.svg" class="header__logo" alt="logo: Crossball">
+            <nav class="header__nav">
+                <a class="nav__link">Расписание</a>
+                <a class="nav__link">Игровые отчёты</a>
+                <a class="nav__link">Статистика</a>
+                <a class="nav__link">Ещё</a>
+            </nav>
+            <div class="header__right">
+                <div class="header__filter">
+                    <img src="images/football.svg" class="filter_football" alt="icon: football">
+                </div>
+                <img src="images/Ava.svg" class="header__avatar" alt="icon: ava">
+                <div class="header__bag"></div>
             </div>
-            <img src="images/Ava.svg" class="header__avatar" alt="icon: ava">
-            <div class="header__bag"></div>
-        </div>
-        <div class="header__mobile">
-            <img src="images/bag_mobile.svg" class="header__bag-mob" alt="icon: bag">
-            <img src="images/burger.svg" class="header__burger" alt="Menu">
+            <div class="header__mobile">
+                <img src="images/bag_mobile.svg" class="header__bag-mob" alt="icon: bag">
+                <img src="images/burger.svg" class="header__burger" alt="Menu">
+            </div>
         </div>
     </header>
     <main>
-        <section class="main__aside">
-            <div class="card card_aside">
-                <div class="card__basic">
-                    <img src="images/Ava_red.png" class="main__avatar" alt="icon: ava">
-                    <div class="card__wrap">
-                        <div class="card__ratio">
-                            <div class="card__ratio_basic">89.40</div>
-                            <div class="card__ratio_add">999</div>
+        <div class="wrap">
+            <section class="main__aside">
+                <div class="card card_aside">
+                    <div class="card__basic">
+                        <img src="images/Ava_red.png" class="main__avatar" alt="icon: ava">
+                        <div class="card__wrap">
+                            <div class="card__ratio">
+                                <div class="card__ratio_basic">89.40</div>
+                                <div class="card__ratio_add">999</div>
+                            </div>
+                            <div class="card__name">Елишакашвили <br>Михо</div>
                         </div>
-                        <div class="card__name">Елишакашвили Михо</div>
                     </div>
+                    <div class="card__edit">Редактировать</div>
                 </div>
-                <div class="card__edit">Редактировать</div>
-            </div>
-            <ul class="aside__menu">
-                <input type="checkbox" name="nav_trigger" id="nav_trigger" class="nav_trigger">
-                <label for="nav_trigger" onclick>
-                    <li class="menu__link menu__link_active menu__link_stat menu__link_mobile">Статистика</li>
-                </label>
-                <li class="menu__link_wrap">
-                    <ul class="aside__sub-menu">
-                        <li class="menu__link menu__link_active">Футбол</li>
-                        <li class="menu__link">Баскетбол</li>
-                        <li class="menu__link">Волейбол</li>
-                    </ul>
-                </li>
-                <li class="menu__link menu__link_next">Ближайшие&nbspигры</li>
-                <li class="menu__link menu__link_reports">Игровые&nbspотчёты</li>
-                <li class="menu__link menu__link_history">История&nbspзаказов</li>
-                <li class="menu__link menu__link_exit">Выйти</li>
-            </ul>
-        </section>
-        <section class="main__content">
-            <div class="card card_main">
-                <div class="card__achie">
-                    <div class="card__text">Награды и достижения</div>
-                    <div class="card__achie-first">
-                        <div class="card__achie-left">
+                <ul class="aside__menu">
+                    <input type="checkbox" name="nav_trigger" id="nav_trigger" class="nav_trigger">
+                    <label for="nav_trigger" onclick>
+                        <li class="menu__link menu__link_active menu__link_stat menu__link_mobile">Статистика</li>
+                    </label>
+                    <li class="menu__link_wrap">
+                        <ul class="aside__sub-menu">
+                            <li class="menu__link menu__link_active">Футбол</li>
+                            <li class="menu__link">Баскетбол</li>
+                            <li class="menu__link">Волейбол</li>
+                        </ul>
+                    </li>
+                    <li class="menu__link menu__link_next">Ближайшие&nbspигры</li>
+                    <li class="menu__link menu__link_reports">Игровые&nbspотчёты</li>
+                    <li class="menu__link menu__link_history">История&nbspзаказов</li>
+                    <li class="menu__link menu__link_exit">Выйти</li>
+                </ul>
+            </section>
+            <section class="main__content">
+                <div class="card card_main">
+                    <div class="card__achie">
+                        <div class="card__text">Награды и достижения</div>
+                        <div class="card__achie-first">
+                            <div class="card__achie-left">
+                                <div class="achie"></div>
+                                <div class="achie"></div>
+                                <div class="achie"></div>
+                            </div>
+                            <div class="card__achie-right">
+                                <div class="achie achie_black"></div>
+                                <div class="achie achie_black"></div>
+                            </div>
+                        </div>
+                        <div class="card__achie-second">
                             <div class="achie"></div>
                             <div class="achie"></div>
                             <div class="achie"></div>
-                        </div>
-                        <div class="card__achie-right">
-                            <div class="achie achie_black"></div>
-                            <div class="achie achie_black"></div>
+                            <div class="achie"></div>
+                            <div class="achie"></div>
                         </div>
                     </div>
-                    <div class="card__achie-second">
-                        <div class="achie"></div>
-                        <div class="achie"></div>
-                        <div class="achie"></div>
-                        <div class="achie"></div>
-                        <div class="achie"></div>
-                    </div>
-                </div>
-                <div class="card__games">
-                    <div class="card__seasons">
-                        <div class="card__seasons-all">
-                            Все сезоны
+                    <div class="card__games">
+                        <div class="card__seasons">
+                            <div class="card__seasons-all">
+                                Все сезоны
+                            </div>
+                            <div class="card__seasons-last">
+                                Сезон 2020/21
+                            </div>
                         </div>
-                        <div class="card__seasons-last">
-                            Сезон 2020/21
-                        </div>
-                    </div>
-                    <div class="card__counts">
-                        <div class="card card_count">
-                            <div class="counts__text">Игры</div>
-                            <div class="counts__number">36</div>
-                        </div>
-                        <div class="card card_count">
-                            <div class="counts__text">Гол</div>
-                            <div class="counts__number">67</div>
-                        </div>
-                        <div class="card card_count">
-                            <div class="counts__text">Пас</div>
-                            <div class="counts__number">136</div>
-                        </div>
-                        <div class="card card_count">
-                            <div class="counts__text">Гол + пас</div>
-                            <div class="counts__number">136</div>
+                        <div class="card__counts">
+                            <div class="card card_count">
+                                <div class="counts__text">Игры</div>
+                                <div class="counts__number">36</div>
+                            </div>
+                            <div class="card card_count">
+                                <div class="counts__text">Гол</div>
+                                <div class="counts__number">67</div>
+                            </div>
+                            <div class="card card_count">
+                                <div class="counts__text">Пас</div>
+                                <div class="counts__number">136</div>
+                            </div>
+                            <div class="card card_count">
+                                <div class="counts__text">Гол + пас</div>
+                                <div class="counts__number">136</div>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="card__socials">
-                    <div class="card__share">Поделиться</div>
-                    <div class="card__social-icons">
-                        <img src="images/fb.svg" class="social-icon" alt="icon: facebook">
-                        <img src="images/vk.svg" class="social-icon" alt="icon: vkontakte">
-                        <img src="images/link.svg" class="social-icon" alt="icon: link">
+                    <div class="card__socials">
+                        <div class="card__share">Поделиться</div>
+                        <div class="card__social-icons">
+                            <img src="images/fb.svg" class="social-icon" alt="icon: facebook">
+                            <img src="images/vk.svg" class="social-icon" alt="icon: vkontakte">
+                            <img src="images/link.svg" class="social-icon" alt="icon: link">
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="content__format">Формат</div>
-            <div class="content__table">
-                <div class="table__title">
-                    <div class="table__season" data-index="seasons">Сезон</div>
-                    <div class="table__quantity table__col" data-index="quantity">Кол-во игр</div>
-                    <div class="table__goal table__col" data-index="goals">Гол</div>
-                    <div class="table__pass table__col" data-index="pass">Пас</div>
-                    <div class="table__goal-pass table__col" data-index="goalsAndPass">Гол + пас</div>
-                    <div class="table__rating table__col" data-index="rating">Рейтинг</div>
+                <div class="content__format">Формат</div>
+                <div class="content__table">
+                    <div class="table__title">
+                        <div class="table__season" data-index="seasons">Сезон</div>
+                        <div class="table__quantity table__col" data-index="quantity">Кол-во игр</div>
+                        <div class="table__goal table__col" data-index="goals">Гол</div>
+                        <div class="table__pass table__col" data-index="pass">Пас</div>
+                        <div class="table__goal-pass table__col" data-index="goalsAndPass">Гол + пас</div>
+                        <div class="table__rating table__col" data-index="rating">Рейтинг</div>
+                    </div>
                 </div>
-            </div>
-        </section>
+            </section>
+        </div>
     </main>
     <footer class="footer">
-        <div class="footer__top">
-            <div class="footer__contacts">
-                <img src="images/Logo_white.svg" class="contacts__logo" alt="logo: Crossball">
-                <div class="contacts__banners">
-                    <img src="images/appstore.svg" class="contacts__banner" alt="Banner: App Store">
-                    <img src="images/googleplay.svg" alt="Banner: Google Play">
+        <div class="wrap">
+            <div class="footer__top">
+                <div class="footer__contacts">
+                    <img src="images/Logo_white.svg" class="contacts__logo" alt="logo: Crossball">
+                    <div class="contacts__banners">
+                        <img src="images/appstore.svg" class="contacts__banner" alt="Banner: App Store">
+                        <img src="images/googleplay.svg" alt="Banner: Google Play">
+                    </div>
+                    <div class="contacts__bottom">
+                        <div class="footer__text_blue contacts__text">Наши контакты</div>
+                        <div class="contacts__phone">+7 (495) 109-03-09</div>
+                        <div class="contacts__mail">go@crossball.ru</div>
+                    </div>
                 </div>
-                <div class="contacts__bottom">
-                    <div class="footer__text_blue contacts__text">Наши контакты</div>
-                    <div class="contacts__phone">+7 (495) 109-03-09</div>
-                    <div class="contacts__mail">go@crossball.ru</div>
+                <div class="footer__structure">
+                    <div class="structure__col">
+                        <div class="structure__title footer__text_blue">Разделы</div>
+                        <div class="structure__link">Главная</div>
+                        <div class="structure__link">Расписание</div>
+                        <div class="structure__link">Игровые отчёты</div>
+                        <div class="structure__link">Статистика</div>
+                    </div>
+                    <div class="structure__col">
+                        <div class="structure__title footer__text_blue">Виды спорта</div>
+                        <div class="structure__link">Футбол</div>
+                        <div class="structure__link">Баскетбол</div>
+                        <div class="structure__link">Волейбол</div>
+                    </div>
+                    <div class="structure__col">
+                        <div class="structure__title footer__text_blue">Полезное</div>
+                        <div class="structure__link">Как записаться?</div>
+                        <div class="structure__link">Ответы на вопросы</div>
+                        <div class="structure__link">Достижения</div>
+                    </div>
+                    <div class="structure__col">
+                        <div class="structure__title footer__text_blue">Чё почём</div>
+                        <div class="structure__link">Абонементы</div>
+                        <div class="structure__link">Корп. клиентам</div>
+                        <div class="structure__link">Партнёры</div>
+                    </div>
                 </div>
             </div>
-            <div class="footer__structure">
-                <div class="structure__col">
-                    <div class="structure__title footer__text_blue">Разделы</div>
-                    <div class="structure__link">Главная</div>
-                    <div class="structure__link">Расписание</div>
-                    <div class="structure__link">Игровые отчёты</div>
-                    <div class="structure__link">Статистика</div>
+            <div class="footer__bottom">
+                <div class="footer__copyright">© Все права защищены</div>
+                <div class="footer__icons">
+                    <img src="images/IG.svg" alt="Icon: Instagram">
+                    <img src="images/VK_footer.svg" alt="Icon: Vkontakte">
+                    <img src="images/VK_footer.svg" alt="Icon: Facebook">
+                    <img src="images/YT.svg" alt="Icon: Youtube">
+                    <img src="images/Telegram.svg" alt="Icon: Telegram">
+                    <img src="images/WA.svg" alt="Icon: Whatsapp">
                 </div>
-                <div class="structure__col">
-                    <div class="structure__title footer__text_blue">Виды спорта</div>
-                    <div class="structure__link">Футбол</div>
-                    <div class="structure__link">Баскетбол</div>
-                    <div class="structure__link">Волейбол</div>
-                </div>
-                <div class="structure__col">
-                    <div class="structure__title footer__text_blue">Полезное</div>
-                    <div class="structure__link">Как записаться?</div>
-                    <div class="structure__link">Ответы на вопросы</div>
-                    <div class="structure__link">Достижения</div>
-                </div>
-                <div class="structure__col">
-                    <div class="structure__title footer__text_blue">Чё почём</div>
-                    <div class="structure__link">Абонементы</div>
-                    <div class="structure__link">Корп. клиентам</div>
-                    <div class="structure__link">Партнёры</div>
-                </div>
+                <div class="footer__created">Cделали в <span>Spans</span></div>
             </div>
-        </div>
-        <div class="footer__bottom">
-            <div class="footer__copyright">© Все права защищены</div>
-            <div class="footer__icons">
-                <img src="images/IG.svg" alt="Icon: Instagram">
-                <img src="images/VK_footer.svg" alt="Icon: Vkontakte">
-                <img src="images/VK_footer.svg" alt="Icon: Facebook">
-                <img src="images/YT.svg" alt="Icon: Youtube">
-                <img src="images/Telegram.svg" alt="Icon: Telegram">
-                <img src="images/WA.svg" alt="Icon: Whatsapp">
-            </div>
-            <div class="footer__created">Cделали в Spans</div>
         </div>
     </footer>
 </body>

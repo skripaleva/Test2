@@ -1,19 +1,25 @@
 body {
-  max-width: 1440px;
   min-width: 320px;
   font-family: 'Proxima Nova Regular', sans-serif;
   font-weight: 400;
+}
+
+.wrap {
+  max-width: 1440px;
   margin: 0 auto;
 }
 
 .header {
+  background-color: #FAF9F9;
+}
+
+.header .wrap {
   width: 100%;
   height: 80px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0 40px;
-  background-color: #FAF9F9;
   box-sizing: border-box;
   filter: drop-shadow(0px 2px 4px #E9E9E9);
 }
@@ -26,7 +32,7 @@ body {
   margin-right: 50px;
 }
 
-.header__nav:after {
+.header__nav::after {
   position: absolute;
   right: -30px;
   top: -3px;
@@ -37,16 +43,11 @@ body {
 }
 
 .nav__link {
-  /*font-family: 'Proxima Nova Regular', sans-serif;*/
-  /*font-weight: 400;*/
   font-size: 16px;
 }
 
-
 .nav__link:first-child {
-  /*text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);*/
-  /*font-weight: 400;*/
-  text-shadow: black 0 0 1px, 0px 4px 4px rgba(0, 0, 0, 0.25);
+  text-shadow: black 0 0 1px, 0 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .header__right {
@@ -67,7 +68,7 @@ body {
   padding: 8px 10px;
 }
 
-.header__filter:after {
+.header__filter::after {
   position: absolute;
   top: 8px;
   content: '';
@@ -85,7 +86,7 @@ body {
   background: url('../images/Bag.svg');
 }
 
-.header__bag:after {
+.header__bag::after {
   position: absolute;
   top: 15px;
   left: 12px;
@@ -105,15 +106,14 @@ body {
 
 main {
   background-color: #FAF9F9;
-  width: 100%;
-  padding: 0 40px;
-  box-sizing: border-box;
-  padding-top: 20px;
 }
 
-main {
+main .wrap{
   display: flex;
   justify-content: space-between;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 20px 40px 0;
 }
 
 .main__aside {
@@ -123,7 +123,7 @@ main {
   height: 800px;
   background-color: #fff;
   border-radius: 10px;
-  box-shadow: 0px 2px 8px #E9E9E9;
+  box-shadow: 0 2px 8px #E9E9E9;
   margin-bottom: 247px;
   margin-right: 20px;
 }
@@ -147,7 +147,7 @@ main {
 
 .card__basic {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
 }
 
 .main__avatar {
@@ -156,7 +156,6 @@ main {
 
 .card__ratio {
   display: flex;
-  /*justify-content: space-between;*/
 }
 
 .card__ratio_basic {
@@ -178,7 +177,7 @@ main {
   box-sizing: border-box;
 }
 
-.card__ratio_add:after {
+.card__ratio_add::after {
   position: absolute;
   content: '';
   width: 12px;
@@ -191,6 +190,10 @@ main {
   line-height: 22px;
 }
 
+.card__name br {
+  display: none;
+}
+
 .card__edit {
   position: relative;
   font-size: 12px;
@@ -199,7 +202,7 @@ main {
   padding-left: 19px;
 }
 
-.card__edit:before {
+.card__edit::before {
   position: absolute;
   left: 0;
   content: '';
@@ -217,12 +220,10 @@ main {
 .menu__link {
   position: relative;
   max-width: 210px;
-  /*height: 32px;*/
   font-size: 16px;
-  line-height: 22px;
+  line-height: 22.4px;
   padding: 5px 10px 5px 38px;
   margin-bottom: 5px;
-  /*box-sizing: border-box;*/
 }
 
 .aside__sub-menu .menu__link {
@@ -239,12 +240,8 @@ main {
   box-sizing: border-box;
 }
 
-.menu__link_stat {
-  /*padding-left: 0;*/
-}
-
-.menu__link_stat:before, .menu__link_stat:after, .menu__link_next:before, .menu__link_reports:before,
-.menu__link_history:before, .menu__link_exit:before {
+.menu__link_stat::before, .menu__link_stat::after, .menu__link_next::before, .menu__link_reports::before,
+.menu__link_history::before, .menu__link_exit::before {
   position: absolute;
   content: '';
   left: 8px;
@@ -252,35 +249,33 @@ main {
   height: 24px;
 }
 
-.menu__link_stat:before {
+.menu__link_stat::before {
   background: url("../images/user.svg");
 }
 
-.menu__link_stat:after {
+.menu__link_stat::after {
   width: 7px;
   height: 7px;
   border-top: 2px solid #ACAFF3;
   border-right: 2px solid #ACAFF3;
   transform: rotate(135deg);
-  /*margin-right: 10px;*/
-  /*transform: rotate(180deg);*/
   top: 10px;
   left: 185px;
 }
 
-.menu__link_next:before {
+.menu__link_next::before {
   background: url("../images/calendar.svg");
 }
 
-.menu__link_reports:before {
+.menu__link_reports::before {
   background: url("../images/report.svg");
 }
 
-.menu__link_history:before {
+.menu__link_history::before {
   background: url("../images/history.svg");
 }
 
-.menu__link_exit:before {
+.menu__link_exit::before {
   background: url("../images/log_out.svg");
 }
 
@@ -302,7 +297,7 @@ main {
   display: block;
 }
 
-.nav_trigger:checked ~ label .menu__link_active:after {
+.nav_trigger:checked ~ label .menu__link_active::after {
   transform: rotate(-45deg);
   top: 15px;
 }
@@ -312,7 +307,6 @@ main {
 }
 
 .menu__link:last-child {
-  /*margin-bottom: 0;*/
   padding-bottom: 0;
 }
 
@@ -339,6 +333,10 @@ main {
   margin-right: 10px;
 }
 
+.card__text {
+  display: none;
+}
+
 .card__achie-first {
   display: flex;
   justify-content: space-between;
@@ -352,6 +350,7 @@ main {
   width: 35px;
   height: 40px;
   background: url("../images/Achie.png");
+  margin-right: 1px;
 }
 
 .achie_black {
@@ -359,14 +358,18 @@ main {
 }
 
 .card__achie-first .achie {
-  margin-right: 15px;
+  margin-right: 12px;
+}
+
+.card__achie-right .achie {
+  margin-right: 5px;
 }
 
 .card__achie-first .achie:last-child {
   margin-right: 0;
 }
 
-.card__achie-left .achie:after {
+.card__achie-left .achie::after {
   position: absolute;
   right: -5px;
   top: -5px;
@@ -382,13 +385,11 @@ main {
   padding: 1px 0 0 4px;
 }
 
-.card__achie-left .achie:first-child:after, .card__achie-left .achie:nth-child(2):after {
+.card__achie-left .achie:first-child::after, .card__achie-left .achie:nth-child(2)::after {
   content: '5';
-
-
 }
 
-.card__achie-left .achie:last-child:after {
+.card__achie-left .achie:last-child::after {
   content: '99';
   width: 25px;
   padding: 1px 0 0 5px;
@@ -462,8 +463,6 @@ main {
 }
 
 .counts__text {
-  /*font-size: 10px;*/
-  /*line-height: 10px;*/
   color: #FAF9F9;
 }
 
@@ -497,7 +496,6 @@ main {
 .content__format {
   position: relative;
   display: flex;
-  /*justify-content: center;*/
   align-items: center;
   width: 170px;
   height: 40px;
@@ -511,18 +509,22 @@ main {
   margin-bottom: 20px;
 }
 
-.content__format:after {
+.content__format::after {
   position: absolute;
   right: 8px;
   content: '';
   width: 24px;
   height: 24px;
   background: url("../images/arrow_down.svg");
-
 }
 
 .content__table {
-  box-shadow: 0px 2px 8px #E9E9E9;
+  box-shadow: 0 2px 8px #E9E9E9;
+  font-size: 16px;
+  line-height: 17.6px;
+  border-radius: 0 0 10px 10px;
+  padding-bottom: 10px;
+  box-sizing: border-box;
 }
 
 .table__title {
@@ -534,12 +536,11 @@ main {
   height: 40px;
   font-size: 12px;
   line-height: 13.2px;
-  padding: 5px 20px;
+  padding: 5px 0 5px 20px;
   background-color: #fff;
   box-sizing: border-box;
   border-bottom: 2px solid #EFEFFD;
 }
-
 
 .table__season {
   flex-basis: 450px;
@@ -585,18 +586,30 @@ main {
   width: 100%;
   height: 60px;
   background-color: #fff;
-  padding: 20px;
+  padding: 20px 0 20px 20px;
   box-sizing: border-box;
+}
+
+.table__line:nth-child(1) {
+  margin-right: 10px;
 }
 
 .table__line:nth-child(2n) {
   background-color: #FAF9F9;
 }
 
+.table__line:last-child {
+  height: 50px;
+  padding-bottom: 10px;
+}
+
 .footer {
-  height: 400px;
-  width: 100%;
   background-color: #222222;
+}
+
+.footer .wrap {
+  min-height: 400px;
+  width: 100%;
   color: #fff;
   padding: 50px 40px 20px;
   box-sizing: border-box;
@@ -613,7 +626,6 @@ main {
 
 .footer__contacts {
   margin-right: 40px;
-  /*flex-basis: 300px;*/
 }
 
 .contacts__logo {
@@ -622,7 +634,6 @@ main {
 
 .contacts__banners {
   margin-bottom: 50px;
-  /*margin-right: 175px;*/
 }
 
 .contacts__banner {
@@ -646,7 +657,7 @@ main {
   padding-left: 34px;
 }
 
-.contacts__phone:before, .contacts__mail:before {
+.contacts__phone::before, .contacts__mail::before {
   position: absolute;
   left: 0;
   bottom: -2px;
@@ -655,11 +666,11 @@ main {
   height: 24px;
 }
 
-.contacts__phone:before {
+.contacts__phone::before {
   background: url("../images/phone.svg");
 }
 
-.contacts__mail:before {
+.contacts__mail::before {
   background: url("../images/mail.svg");
 }
 
@@ -674,6 +685,7 @@ main {
 .structure__col {
   margin-right: 20px;
   flex-basis: 150px;
+  margin-bottom: 15px;
 }
 
 .structure__title {
@@ -697,7 +709,7 @@ main {
   margin-right: 55px;
 }
 
-@media (max-width: 1300px) {
+@media (max-width: 1310px) {
   .footer__structure {
     margin-right: 0;
   }
@@ -748,6 +760,10 @@ main {
 
 @media (max-width: 1024px) {
   .header {
+    /*padding: 0 20px;*/
+  }
+
+  .header .wrap {
     padding: 0 20px;
   }
 
@@ -763,7 +779,7 @@ main {
     display: none;
   }
 
-  main {
+  main .wrap {
     padding: 20px 20px 0;
   }
 
@@ -786,11 +802,15 @@ main {
     line-height: 22px;
   }
 
+  .table__col {
+    flex-basis: 90px;
+  }
+
   .table__season {
     flex-basis: 250px;
   }
 
-  .footer {
+  .footer .wrap {
     padding: 30px 20px 20px;
   }
 
@@ -802,8 +822,6 @@ main {
     width: 105px;
     height: 30px;
   }
-
-
 }
 
 @media (max-width: 900px) {
@@ -828,13 +846,13 @@ main {
   }
 
   .card_aside {
-    height: 280px;
+    height: 260px;
     padding: 40px 20px;
     margin-bottom: 30px;
   }
 
   .card__socials {
-    top: 215px;
+    top: 195px;
     left: 200px;
   }
 
@@ -843,7 +861,7 @@ main {
   }
 
   .card_main {
-    height: 280px;
+    height: 260px;
     flex-direction: column;
   }
 
@@ -851,24 +869,49 @@ main {
     order: 2;
   }
 
+  .card__achie-first {
+    margin-bottom: 10px;
+  }
+
   .card__text {
+    display: block;
     font-size: 14px;
     line-height: 15.4px;
     color: #909090;
-    margin-bottom: 6px;
+    margin-bottom: 10px;
   }
 
   .card__games {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
+  }
+
+  .card__seasons {
+    margin-bottom: 10px;
   }
 
   .card_count {
     flex-basis: 100px;
   }
+
+  .table__col {
+    flex-basis: 60px;
+  }
+
+  .table__title {
+    padding: 5px 10px;
+  }
+
+  .table__line {
+    padding: 20px 10px;
+  }
+
+  .footer__copyright {
+    margin-bottom: 5px;
+  }
 }
 
 @media (max-width: 768px) {
-  .header {
+  .header .wrap {
     height: 60px;
   }
 
@@ -893,7 +936,7 @@ main {
     top: -3px;
   }
 
-  main {
+  main .wrap {
     padding: 0;
   }
   
@@ -906,13 +949,14 @@ main {
   }
 
   .card__socials {
-    top: 195px;
+    top: 175px;
     left: 160px;
   }
 
   .content__table {
-    min-width: 430px;
     overflow-x: scroll;
+    font-size: 14px;
+    line-height: 15.4px;
   }
 
   .footer__icons {
@@ -924,6 +968,7 @@ main {
   .main__aside {
     flex-basis: 250px;
   }
+
   .card__socials {
     left: 140px;
   }
@@ -935,7 +980,7 @@ main {
 
   .footer__top {
     justify-content: center;
-    margin-bottom: 80px;
+    margin-bottom: 110px;
   }
 
   .contacts__banners img {
@@ -956,6 +1001,10 @@ main {
     margin-right: 20px;
   }
 
+  .contacts__mail:before {
+    bottom: 7px;
+  }
+
   .footer__structure {
     display: none;
   }
@@ -972,7 +1021,7 @@ main {
 }
 
 @media (max-width: 570px) {
-  main {
+  main .wrap {
     flex-direction: column;
     padding: 0 20px;
   }
@@ -980,8 +1029,8 @@ main {
   .main__aside {
     margin-right: 0;
     height: auto;
-    max-height: 240px;
-    margin-bottom: 20px;
+    max-height: 235px;
+    margin-bottom: 0;
     background-color: #FAF9F9;
     box-shadow: none;
   }
@@ -1005,17 +1054,14 @@ main {
   .aside__menu {
     display: flex;
     overflow-x: scroll;
-    margin-left: 10px;
-    /*margin-bottom: 20px;*/
+    margin-left: 0;
   }
 
   .aside__menu>.menu__link:last-child {
     display: none;
   }
 
-  /*.aside__menu > .menu__link, label > .menu__link {*/
-
-  .aside__menu > .menu__link {
+  .aside__menu > .menu__link{
     padding-right: 5px;
     margin-bottom: 0;
     background-color: #fff;
@@ -1023,7 +1069,11 @@ main {
     margin-right: 10px;
     height: 40px;
     box-sizing: border-box;
+    padding-top: 8px;
+  }
 
+  label > .menu__link {
+    padding-top: 8px;
   }
 
   .menu__link_history {
@@ -1031,7 +1081,6 @@ main {
   }
 
   .menu__link_active {
-
     background-color: #fff;
   }
 
@@ -1055,25 +1104,61 @@ main {
     overflow-y: visible;
     z-index: 1;
     border-radius: 5px;
-    left: 10px;
+    left: 20px;
     top: 216px;
     box-sizing: border-box;
     padding: 10px;
+    margin-left: 0;
   }
 
-  .menu__link_active.menu__link_mobile:after {
+  .menu__link_active.menu__link_mobile::after {
     left: 155px;
   }
 
-  .menu__link_stat:before {
+  .menu__link_stat::before {
     background: url("../images/chart.svg");
+  }
+
+  .card_main {
+    height: 270px;
+  }
+
+  .card__achie {
+    margin-right: 0;
+  }
+
+  .card__games {
+    margin-bottom: 20px;
+  }
+
+  .content__format {
+    margin-bottom: 10px;
+  }
+
+  .content__table {
+    margin-bottom: 363px;
+    border-radius: 0 0 5px 5px;
+  }
+
+  .table__title {
+    height: 27px;
+  }
+
+  .table__line {
+    height: 42px;
+    padding: 15px 10px;
+  }
+
+  .table__line:last-child {
+    height: 32px;
   }
 }
 
 @media (max-width: 375px) {
-  .header {
+  .header .wrap {
     height: 60px;
     padding-left: 10px;
+    padding-right: 10px;
   }
 
   .header__logo {
@@ -1081,7 +1166,7 @@ main {
     height: 20px;
   }
 
-  main {
+  main .wrap {
     padding: 0;
   }
 
@@ -1092,10 +1177,129 @@ main {
   .card_aside, .card_main {
     border-radius: 0;
   }
+
+  .card__ratio_basic {
+    font-size: 20px;
+    line-height: 22px;
+    margin-bottom: 20px;
+  }
+
+  .card__name {
+    font-size: 16px;
+    line-height: 17.6px;
+  }
+
+  .card__name br {
+    display: block;
+  }
+
+  .social-icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  .aside__menu {
+    margin-left: 10px;
+  }
+
+  .aside__sub-menu {
+    left: 10px;
+  }
+
+  .content__format {
+    margin-left: 10px;
+  }
+
+  .content__table {
+    overflow-x: scroll;
+    margin-left: 10px;
+  }
+
+  .table__line, .table__title {
+    min-width: 430px;
+  }
+
+  .footer .wrap {
+    position: relative;
+    min-height: 320px;
+    padding: 20px;
+  }
+
+  .footer__top {
+    margin-bottom: 20px;
+  }
+
+  .footer__contacts {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .contacts__logo {
+    width: 120px;
+    height: 20px;
+    order: 3;
+    align-self: center;
+    margin-bottom: 0;
+  }
+
+  .contacts__banners {
+    order: 1;
+  }
+
+  .contacts__bottom {
+    order: 0;
+    flex-direction: column;
+    margin-bottom: 85px;
+  }
+
+  .contacts__phone {
+    order: 1;
+    margin-right: 0;
+    padding-left: 0;
+  }
+
+  .contacts__mail {
+    margin-bottom: 10px;
+    padding-left: 0;
+  }
+
+  .contacts__phone::before, .contacts__mail::before {
+    display: none;
+  }
+
+  .contacts__banners {
+    margin-bottom: 33px;
+  }
+
+  .contacts__banners img {
+    width: 105px;
+    height: 30px;
+  }
+
+  .footer__bottom {
+    position: static;
+  }
+
+  .footer__copyright, .footer__created {
+    font-size: 12px;
+    line-height: 13.2px;
+  }
+
+  .footer__icons {
+    top: -100px;
+  }
+
+  .footer__created span {
+    text-decoration: underline;
+  }
 }
 
 @media (max-width: 355px) {
   .card__socials {
-    left: 210px;
+    left: 228px;
+  }
+
+  .social-icon {
+    margin-right: 8px;
   }
 }
