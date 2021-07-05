@@ -1,51 +1,62 @@
 body {
-  max-width: 1440px;
+  min-width: 320px;
   font-family: 'Proxima Nova Regular', sans-serif;
   font-weight: 400;
+}
+
+.wrap {
+  max-width: 1440px;
   margin: 0 auto;
 }
 
 .header {
-  width: 100%;
-  height: 80px;
+  position: relative;
+  background-color: #FAF9F9;
+  box-shadow: 0 2px 4px #E9E9E9;
+  z-index: 1;
+}
+
+.header .wrap {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  max-width: 1440px;
+  width: 100%;
+  height: 80px;
   padding: 0 40px;
-  background-color: #FAF9F9;
   box-sizing: border-box;
-  filter: drop-shadow(0px 2px 4px #E9E9E9);
 }
 
 .header__nav {
-  position: relative;
   display: flex;
   flex-basis: 499px;
-  justify-content: space-between;
+  justify-content: space-around;
+  margin-right: 50px;
 }
 
-.header__nav:after {
-  position: absolute;
-  right: -30px;
+
+.nav__link {
+  font-size: 16px;
+  transition: 0.5s;
+}
+
+.nav__link:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.nav__link:first-child {
+  text-shadow: black 0 0 1px, 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.nav__link:last-child {
+  position: relative;
   top: -3px;
-  content: '';
   width: 24px;
   height: 24px;
   background: url('../images/arrow_down.svg');
 }
 
-.nav__link {
-  /*font-family: 'Proxima Nova Regular', sans-serif;*/
-  /*font-weight: 400;*/
-  font-size: 16px;
-}
-
-
-.nav__link:first-child {
-  /*text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);*/
-  /*font-weight: 400;*/
-  text-shadow: black 0 0 1px, 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
 
 .header__right {
   display: flex;
@@ -56,16 +67,22 @@ body {
 
 .header__filter {
   position: relative;
-  background-color: #fff;
   width: 70px;
   height: 40px;
+  background-color: #fff;
+  transition: 0.5s;
+}
+
+.header__filter:hover {
+  cursor: pointer;
+  opacity: 0.8;
 }
 
 .filter_football {
   padding: 8px 10px;
 }
 
-.header__filter:after {
+.header__filter::after {
   position: absolute;
   top: 8px;
   content: '';
@@ -78,38 +95,1307 @@ body {
   position: relative;
   width: 21px;
   height: 28px;
-  margin-top: 6px;
   background: url('../images/Bag.svg');
+  transition: 0.5s;
+  margin-top: 6px;
+  margin-right: 12px;
 }
 
-/*.header__bag {*/
-/*  position: relative;*/
-/*}*/
+.header__bag:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
 
-.header__bag:after {
+.header__bag::after {
   position: absolute;
   top: 15px;
   left: 12px;
   content: '1';
   font-size: 12px;
-  padding: 1px 0 0 5px;
   width: 11px;
   height: 14px;
+  padding: 1px 0 0 5px;
   color: #fff;
   background-color: #86E3CE;
   border-radius: 10px;
 }
 
-/*.header__filter:before {*/
-/*  position: absolute;*/
-/*  content: '';*/
-/*  width: 24px;*/
-/*  height: 24px;*/
-/*  background: url('../images/football.svg');*/
-/*}*/
+.header__mobile {
+  display: none;
+}
 
 main {
   background-color: #FAF9F9;
+}
+
+main .wrap{
+  display: flex;
+  justify-content: space-between;
   width: 100%;
-  min-height: 500px;
+  padding: 20px 40px 0;
+  box-sizing: border-box;
+}
+
+.main__aside {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 295px;
+  height: 800px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px #E9E9E9;
+  margin-bottom: 247px;
+  margin-right: 20px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  height: 184px;
+  padding: 20px;
+  color: #fff;
+  background: #2C2C2C linear-gradient(to right, rgba(30, 30, 40, 0), rgba(90, 96, 231, 0.35));
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+
+.card_aside {
+  margin-bottom: 50px;
+}
+
+.card__basic {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.main__avatar {
+  margin-right: 10px;
+}
+
+.card__ratio {
+  display: flex;
+}
+
+.card__ratio_basic {
+  font-size: 30px;
+  line-height: 33px;
+  margin-right: 2px;
+}
+
+.card__ratio_add {
+  position: relative;
+  width: 42px;
+  height: 16px;
+  font-size: 12px;
+  line-height: 13.2px;
+  color: #EFEFFD;
+  padding: 2px 0 0 6px;
+  background-color: #5A60E7;
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+
+.card__ratio_add::after {
+  position: absolute;
+  content: '';
+  width: 12px;
+  height: 12px;
+  background: url('../images/ratio_up.svg');
+}
+
+.card__name {
+  font-size: 20px;
+  line-height: 22px;
+}
+
+.card__name br {
+  display: none;
+}
+
+.card__edit {
+  position: relative;
+  font-size: 12px;
+  line-height: 13.2px;
+  color: #ACAFF3;
+  padding-left: 19px;
+  transition: 0.5s;
+}
+
+.card__edit:hover {
+  cursor: pointer;
+  opacity: .8;
+}
+
+.card__edit::before {
+  position: absolute;
+  left: 0;
+  content: '';
+  width: 14px;
+  height: 14px;
+  background: url('../images/edit.svg');
+}
+
+.aside__menu, .aside__sub-menu {
+  list-style: none;
+  padding-left: 0;
+  margin: 0 0 0 20px;
+}
+
+.menu__link {
+  position: relative;
+  max-width: 210px;
+  font-size: 16px;
+  line-height: 22.4px;
+  padding: 5px 10px 5px 38px;
+  margin-bottom: 5px;
+  transition: 0.5s;
+}
+
+.menu__link:hover {
+  cursor: pointer;
+  opacity: .8;
+}
+
+.aside__sub-menu .menu__link {
+  padding: 5px;
+}
+
+.menu__link_active {
+  height: 32px;
+  color: #5A60E7;
+  background-color: #EFEFFD;
+  border-radius: 5px;
+  padding: 5px 10px 5px 38px;
+  box-sizing: border-box;
+  margin-bottom: 5px;
+}
+
+.menu__link_stat::before, .menu__link_stat::after, .menu__link_next::before, .menu__link_reports::before,
+.menu__link_history::before, .menu__link_exit::before {
+  position: absolute;
+  content: '';
+  left: 8px;
+  width: 24px;
+  height: 24px;
+}
+
+.menu__link_stat::before {
+  background: url("../images/user.svg");
+}
+
+.menu__link_stat::after {
+  top: 10px;
+  left: 185px;
+  width: 7px;
+  height: 7px;
+  border-top: 2px solid #ACAFF3;
+  border-right: 2px solid #ACAFF3;
+  transform: rotate(135deg);
+}
+
+.menu__link_next::before {
+  background: url("../images/calendar.svg");
+}
+
+.menu__link_reports::before {
+  background: url("../images/report.svg");
+}
+
+.menu__link_history::before {
+  background: url("../images/history.svg");
+}
+
+.menu__link_exit::before {
+  background: url("../images/log_out.svg");
+}
+
+.aside__sub-menu {
+  display: none;
+}
+
+.aside__sub-menu .menu__link {
+  max-width: 190px;
+}
+
+.nav_trigger {
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+}
+
+.nav_trigger:checked ~ li .aside__sub-menu {
+  display: block;
+}
+
+.nav_trigger:checked ~ label .menu__link_active::after {
+  transform: rotate(-45deg);
+  top: 15px;
+}
+
+.aside__menu>.menu__link:last-child {
+  margin-top: 50px;
+}
+
+.menu__link:last-child {
+  padding-bottom: 0;
+}
+
+.main__content {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 1015px;
+}
+
+.card_main {
+  flex-direction: row;
+  z-index: 0;
+  margin-bottom: 20px;
+}
+
+.card__achie-left {
+  margin-right: 20px;
+}
+
+.card__achie {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 275px;
+  margin-right: 10px;
+}
+
+.card__text {
+  display: none;
+}
+
+.card__achie-first {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #D6D7F9;
+}
+
+.achie {
+  position: relative;
+  display: inline-block;
+  width: 35px;
+  height: 40px;
+  background: url("../images/Achie.png");
+  margin-right: 1px;
+}
+
+.achie_black {
+  background: url("../images/Achie_mono.png");
+}
+
+.card__achie-first .achie {
+  margin-right: 12px;
+}
+
+.card__achie-right .achie {
+  margin-right: 5px;
+}
+
+.card__achie-first .achie:last-child {
+  margin-right: 0;
+}
+
+.card__achie-left .achie::after {
+  position: absolute;
+  right: -5px;
+  top: -5px;
+  content: '';
+  height: 15px;
+  width: 15px;
+  font-size: 12px;
+  line-height: 13.2px;
+  padding: 1px 0 0 4px;
+  color: #5A60E7;
+  background-color: #fff;
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+
+.card__achie-left .achie:first-child::after, .card__achie-left .achie:nth-child(2)::after {
+  content: '5';
+}
+
+.card__achie-left .achie:last-child::after {
+  content: '99';
+  width: 25px;
+  padding: 1px 0 0 5px;
+}
+
+.card__games {
+  flex-basis: 440px;
+  margin-right: 10px;
+}
+
+.card__seasons {
+  display: flex;
+  flex-basis: 440px;
+  justify-content: space-between;
+  height: 40px;
+  padding: 4px;
+  border: 0.5px solid #5A60E7;
+  border-radius: 5px;
+  font-size: 16px;
+  line-height: 17.6px;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+}
+
+.card__seasons div {
+  display: flex;
+  flex-basis: 210px;
+  justify-content: center;
+  align-items: center;
+  height: 30px;
+  transition: 0.5s;
+}
+
+.card__seasons-all {
+  background-color: #5A60E7;
+  border-radius: 3px;
+}
+
+.card__seasons-last {
+  color: #ACAFF3;
+}
+
+.card__seasons-all:hover, .card__seasons-last:hover {
+  cursor: pointer;
+  opacity: .8;
+}
+
+.card__counts {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.card_count {
+  position: relative;
+  width: 93px;
+  height: 73px;
+  padding: 9px;
+  border-radius: 5px;
+  margin-right: 8px;
+}
+
+.card_count:last-child {
+  margin-right: 0;
+}
+
+.card_count::before {
+  content: "";
+  position: absolute;
+  top: -1px;
+  bottom: -1px;
+  left: -1px;
+  right: -1px;
+  background: linear-gradient(135deg, #6171FF 0, rgba(97, 113, 255, 0) 48.75%, #6171FF 100%);
+  border-radius: 7px;
+  z-index: -1;
+}
+
+.counts__text {
+  color: #FAF9F9;
+}
+
+.counts__number {
+  font-size: 30px;
+  line-height: 42px;
+  color: #FF795B;
+  text-align: end;
+}
+
+.card__socials {
+  flex-basis: 173px;
+  height: 150px;
+  background: url("../images/pattern.svg") no-repeat top right;
+}
+
+.card__share {
+  position: relative;
+  top: -10px;
+  font-size: 12px;
+  line-height: 13.2px;
+  color: #ACAFF3;
+}
+
+.social-icon {
+  width: 25px;
+  height: 25px;
+  margin-right: 11px;
+}
+
+.content__format {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 170px;
+  height: 40px;
+  padding: 9px 8px 9px 10px;
+  border-radius: 5px;
+  font-size: 16px;
+  line-height: 22.4px;
+  color: #909090;
+  background-color: #fff;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+  transition: 0.5s;
+}
+
+.content__format:hover {
+  cursor: pointer;
+  opacity: .8;
+}
+
+.content__format::after {
+  position: absolute;
+  right: 8px;
+  content: '';
+  width: 24px;
+  height: 24px;
+  background: url("../images/arrow_down.svg");
+}
+
+.content__table {
+  font-size: 16px;
+  line-height: 17.6px;
+  padding-bottom: 10px;
+  border-radius: 0 0 10px 10px;
+  box-shadow: 0 2px 8px #E9E9E9;
+  box-sizing: border-box;
+}
+
+.table__title {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 100%;
+  height: 40px;
+  font-size: 12px;
+  line-height: 13.2px;
+  padding: 5px 0 5px 20px;
+  background-color: #fff;
+  border-bottom: 2px solid #EFEFFD;
+  box-sizing: border-box;
+}
+
+.table__season {
+  flex-basis: 450px;
+}
+
+.table__title div {
+  transition: 0.5s;
+}
+
+.table__title div:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.table__col {
+  position: relative;
+  flex-basis: 105px;
+  padding-left: 10px;
+}
+
+.table__col_blue {
+  color: #5A60E7;
+}
+
+.table__title .table__col {
+  cursor: pointer;
+}
+
+.table__title .table__col::after, .table__title .table__col::before {
+  position: absolute;
+  left: 0;
+  content: '';
+  width: 6px;
+  height: 6px;
+}
+
+.table__title .table__col::before {
+  background: no-repeat url("../images/triangle_up.svg");
+  bottom: 8px;
+}
+
+.table__title .table__col::after {
+  bottom: 1px;
+  background: no-repeat url("../images/triangle_down.svg");
+}
+
+.table__line {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  height: 60px;
+  padding: 20px 0 20px 20px;
+  background-color: #fff;
+  box-sizing: border-box;
+}
+
+.table__line:nth-child(1) {
+  margin-right: 10px;
+}
+
+.table__line:nth-child(2n) {
+  background-color: #FAF9F9;
+}
+
+.table__line:last-child {
+  height: 50px;
+  padding-bottom: 10px;
+}
+
+.footer {
+  background-color: #222222;
+}
+
+.footer .wrap {
+  min-height: 400px;
+  width: 100%;
+  padding: 50px 40px 20px;
+  font-size: 16px;
+  line-height: 17.6px;
+  color: #fff;
+  box-sizing: border-box;
+}
+
+.footer__top {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 64px;
+}
+
+.footer__contacts {
+  margin-right: 40px;
+}
+
+.contacts__logo {
+  margin-bottom: 30px;
+}
+
+.contacts__banners {
+  margin-bottom: 50px;
+}
+
+.contacts__banners img {
+  cursor: pointer;
+}
+
+.contacts__banner {
+  margin-right: 10px;
+}
+
+.footer__text_blue {
+  color: #ACAFF3
+}
+
+.contacts__text {
+  margin-bottom: 20px;
+}
+
+.contacts__phone {
+  margin-bottom: 10px;
+}
+
+.contacts__phone, .contacts__mail {
+  position: relative;
+  display: block;
+  padding-left: 34px;
+  text-decoration: none;
+  color: #fff;
+  transition: 0.5s;
+}
+
+.contacts__phone:hover, .contacts__mail:hover {
+  cursor: pointer;
+  opacity: .8;
+}
+
+.contacts__phone::before, .contacts__mail::before {
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  content: '';
+  width: 24px;
+  height: 24px;
+}
+
+.contacts__phone::before {
+  background: url("../images/phone.svg");
+}
+
+.contacts__mail::before {
+  background: url("../images/mail.svg");
+}
+
+.footer__structure {
+  display: flex;
+  justify-content: space-between;
+  flex-basis: 800px;
+  flex-wrap: wrap;
+  margin-right: 96px;
+}
+
+.structure__col {
+  flex-basis: 150px;
+  margin-bottom: 15px;
+  margin-right: 20px;
+}
+
+.structure__title {
+  margin-bottom: 20px;
+}
+
+.structure__link {
+  margin-bottom: 10px;
+  transition: 0.5s;
+}
+
+.structure__link:hover {
+  cursor: pointer;
+  opacity: .8;
+}
+
+.footer__bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer__icons {
+  position: relative;
+  bottom: 5px;
+  display: flex;
+  margin-right: 55px;
+}
+
+.footer__icons img {
+  transition: 0.5s;
+}
+
+.footer__icons img:hover {
+  cursor: pointer;
+  opacity: .8;
+}
+
+@media (max-width: 1310px) {
+  .footer__structure {
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 1250px) {
+  .header__nav {
+    flex-basis: 450px;
+  }
+
+  .header__right{
+    flex-basis: 250px;
+  }
+
+  main {
+    position: relative;
+  }
+
+  .card__games {
+    margin-right: 0;
+  }
+
+  .card__socials {
+    position: absolute;
+    width: 100px;
+    height: 45px;
+    top: 140px;
+    left: 190px;
+    background: none;
+  }
+
+  .social-icon {
+    margin-right: 5px;
+  }
+
+  .social-icon:hover {
+    cursor: pointer;
+  }
+
+  .table__season {
+    flex-basis: 350px;
+  }
+
+  .footer__contacts {
+    min-width: 290px;
+  }
+
+  .footer__structure {
+    flex-basis: 700px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .header .wrap {
+    padding: 0 20px;
+  }
+
+  .header__logo {
+    width: 140px;
+  }
+
+  .header__right{
+    flex-basis: 130px;
+  }
+
+  .header__avatar {
+    display: none;
+  }
+
+  main .wrap {
+    padding: 20px 20px 0;
+  }
+
+  .card__games {
+    flex-basis: 300px;
+  }
+
+  .card_count {
+    width: 67.5px;
+    height: 60px;
+  }
+
+  .counts__text {
+     font-size: 12px;
+     line-height: 13.2px;
+  }
+
+  .counts__number {
+    font-size: 20px;
+    line-height: 22px;
+  }
+
+  .table__col {
+    flex-basis: 90px;
+  }
+
+  .table__season {
+    flex-basis: 250px;
+  }
+
+  .footer .wrap {
+    padding: 30px 20px 20px;
+  }
+
+  .footer__contacts {
+    min-width: 225px;
+  }
+
+  .contacts__banners img {
+    width: 105px;
+    height: 30px;
+  }
+}
+
+@media (max-width: 900px) {
+  .header__nav {
+    flex-basis: 400px;
+  }
+
+  .header__right{
+    flex-basis: 35px;
+  }
+
+  .header__filter {
+    display: none;
+  }
+
+  .main__aside {
+    flex-basis: 340px;
+  }
+
+  .card {
+    padding: 10px;
+  }
+
+  .card_aside {
+    height: 260px;
+    padding: 40px 20px;
+    margin-bottom: 30px;
+  }
+
+  .card__socials {
+    top: 195px;
+    left: 200px;
+  }
+
+  .main__content {
+    flex-basis: 490px;
+  }
+
+  .card_main {
+    flex-direction: column;
+    height: 260px;
+  }
+
+  .card__achie {
+    order: 2;
+  }
+
+  .card__achie-first {
+    margin-bottom: 10px;
+  }
+
+  .card__text {
+    display: block;
+    font-size: 14px;
+    line-height: 15.4px;
+    color: #909090;
+    margin-bottom: 10px;
+  }
+
+  .card__games {
+    margin-bottom: 10px;
+  }
+
+  .card__seasons {
+    margin-bottom: 10px;
+  }
+
+  .card_count {
+    flex-basis: 100px;
+  }
+
+  .table__col {
+    flex-basis: 60px;
+  }
+
+  .table__title {
+    padding: 5px 10px;
+  }
+
+  .table__line {
+    padding: 20px 10px;
+  }
+
+  .footer__copyright {
+    margin-bottom: 5px;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    z-index: 0;
+  }
+
+  .header .wrap {
+    height: 60px;
+  }
+
+  .header__nav {
+    display: none;
+  }
+
+  .header__right{
+    display: none;
+  }
+
+  .header__mobile {
+    display: block;
+  }
+
+  .header__bag-mob {
+    margin-right: 20px;
+    transition: 0.5s;
+  }
+
+  .header__bag-mob:hover {
+    cursor: pointer;
+    opacity: 0.8;
+  }
+
+  .header__burger {
+    position: relative;
+    top: -3px;
+    transition: 0.5s;
+  }
+
+  .header__burger:hover {
+    cursor: pointer;
+    opacity: 0.8;
+  }
+
+  main .wrap {
+    padding: 0;
+  }
+  
+  .main__aside {
+    margin-right: 10px;
+  }
+
+  .card_aside {
+    padding: 40px 10px;
+  }
+
+  .card__socials {
+    top: 175px;
+    left: 160px;
+  }
+
+  .content__table {
+    overflow-x: scroll;
+    font-size: 14px;
+    line-height: 15.4px;
+  }
+
+  .footer__icons {
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 650px) {
+  .main__aside {
+    flex-basis: 250px;
+  }
+
+  .card__socials {
+    left: 140px;
+  }
+
+  .footer__contacts {
+    margin-right: 0;
+    text-align: center;
+  }
+
+  .footer__top {
+    justify-content: center;
+    margin-bottom: 110px;
+  }
+
+  .contacts__banners img {
+    width: 137px;
+    height: 40px;
+  }
+
+  .contacts__bottom {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .footer__text_blue {
+    display: none;
+  }
+
+  .contacts__phone {
+    margin-right: 20px;
+  }
+
+  .contacts__mail:before {
+    bottom: 7px;
+  }
+
+  .footer__structure {
+    display: none;
+  }
+
+  .footer__bottom {
+    position: relative;
+    flex-direction: column;
+  }
+
+  .footer__icons {
+    position: absolute;
+    top: -100px;
+  }
+}
+
+@media (max-width: 570px) {
+  main .wrap {
+    flex-direction: column;
+    padding: 0 20px;
+  }
+
+  .main__aside {
+    height: auto;
+    max-height: 235px;
+    background-color: #FAF9F9;
+    box-shadow: none;
+    margin-right: 0;
+    margin-bottom: 0;
+  }
+
+  .card_aside {
+    align-items: flex-start;
+    height: 155px;
+    padding: 20px 10px 19px;
+    margin-bottom: 20px;
+  }
+
+  .main__avatar {
+    margin-right: 50px;
+  }
+
+  .card__socials {
+    top: 100px;
+    left: 255px;
+  }
+
+  .aside__menu {
+    display: flex;
+    overflow-x: scroll;
+    margin-left: 0;
+  }
+
+  .aside__menu>.menu__link:last-child {
+    display: none;
+  }
+
+  .aside__menu > .menu__link{
+    height: 40px;
+    padding-right: 5px;
+    padding-top: 8px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-sizing: border-box;
+    margin-right: 10px;
+    margin-bottom: 0;
+  }
+
+  label > .menu__link {
+    padding-top: 8px;
+  }
+
+  .menu__link_history {
+    margin-right: 0;
+  }
+
+  .menu__link_active {
+    background-color: #fff;
+  }
+
+  .aside__sub-menu .menu__link {
+    color: #909090;
+  }
+
+  .menu__link_mobile {
+    width: 180px;
+    height: 40px;
+    background-color: #5A60E7;
+    color: #fff;
+    margin-right: 10px;
+  }
+
+  .aside__sub-menu {
+    position: absolute;
+    left: 20px;
+    top: 216px;
+    width: 180px;
+    height: 117px;
+    background-color: #fff;
+    overflow-y: visible;
+    z-index: 1;
+    border-radius: 5px;
+    box-sizing: border-box;
+    padding: 10px;
+    margin-left: 0;
+  }
+
+  .menu__link_active.menu__link_mobile::after {
+    left: 155px;
+  }
+
+  .menu__link_stat::before {
+    background: url("../images/chart.svg");
+  }
+
+  .card_main {
+    height: 270px;
+  }
+
+  .card__achie {
+    margin-right: 0;
+  }
+
+  .card__games {
+    margin-bottom: 20px;
+  }
+
+  .content__format {
+    margin-bottom: 10px;
+  }
+
+  .content__table {
+    border-radius: 0 0 5px 5px;
+    margin-bottom: 363px;
+  }
+
+  .table__title {
+    height: 27px;
+  }
+
+  .table__line {
+    height: 42px;
+    padding: 15px 10px;
+  }
+
+  .table__line:last-child {
+    height: 32px;
+  }
+}
+
+@media (max-width: 375px) {
+  .header .wrap {
+    height: 60px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .header__logo {
+    width: 120px;
+    height: 20px;
+  }
+
+  main .wrap {
+    padding: 0;
+  }
+
+  .main__avatar {
+    margin-right: 10px;
+  }
+
+  .card_aside, .card_main {
+    border-radius: 0;
+  }
+
+  .card__ratio_basic {
+    font-size: 20px;
+    line-height: 22px;
+    margin-bottom: 20px;
+  }
+
+  .card__name {
+    font-size: 16px;
+    line-height: 17.6px;
+  }
+
+  .card__name br {
+    display: block;
+  }
+
+  .social-icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  .aside__menu {
+    margin-left: 10px;
+  }
+
+  .aside__sub-menu {
+    left: 10px;
+  }
+
+  .content__format {
+    margin-left: 10px;
+  }
+
+  .content__table {
+    overflow-x: scroll;
+    margin-left: 10px;
+  }
+
+  .table__line, .table__title {
+    min-width: 430px;
+  }
+
+  .footer .wrap {
+    position: relative;
+    min-height: 320px;
+    padding: 20px;
+  }
+
+  .footer__top {
+    margin-bottom: 20px;
+  }
+
+  .footer__contacts {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .contacts__logo {
+    width: 120px;
+    height: 20px;
+    order: 3;
+    align-self: center;
+    margin-bottom: 0;
+  }
+
+  .contacts__banners {
+    order: 1;
+  }
+
+  .contacts__bottom {
+    order: 0;
+    flex-direction: column;
+    margin-bottom: 85px;
+  }
+
+  .contacts__phone {
+    order: 1;
+    padding-left: 0;
+    margin-right: 0;
+  }
+
+  .contacts__mail {
+    margin-bottom: 10px;
+    padding-left: 0;
+  }
+
+  .contacts__phone::before, .contacts__mail::before {
+    display: none;
+  }
+
+  .contacts__banners {
+    margin-bottom: 33px;
+  }
+
+  .contacts__banners img {
+    width: 105px;
+    height: 30px;
+  }
+
+  .footer__bottom {
+    position: static;
+  }
+
+  .footer__copyright, .footer__created {
+    font-size: 12px;
+    line-height: 13.2px;
+  }
+
+  .footer__icons {
+    top: -100px;
+  }
+
+  .footer__created span {
+    text-decoration: underline;
+  }
+}
+
+@media (max-width: 355px) {
+  .card__socials {
+    left: 228px;
+  }
+
+  .social-icon {
+    margin-right: 8px;
+  }
 }

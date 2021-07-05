@@ -1,0 +1,42 @@
+[
+  {
+    "season": "Сезон 2021/2020",
+    "quantity": 5,
+    "goals": 218,
+    "pass": 146,
+    "goalsAndPass": 364,
+    "rating": "89.40"
+  },
+  {
+    "season": "Сезон 2020/2019",
+    "quantity": 5,
+    "goals": 242,
+    "pass": 122,
+    "goalsAndPass": 364,
+    "rating": "89.30"
+  },
+  {
+    "season": "Сезон 2019/2018",
+    "quantity": 6,
+    "goals": 173,
+    "pass": 164,
+    "goalsAndPass": 337,
+    "rating": "89.50"
+  },
+  {
+    "season": "Сезон 2018/2017",
+    "quantity": 7,
+    "goals": 157,
+    "pass": 145,
+    "goalsAndPass": 302,
+    "rating": "89.90"
+  },
+  {
+    "season": "Сезон 2017/2016",
+    "quantity": 9,
+    "goals": 174,
+    "pass": 102,
+    "goalsAndPass": 276,
+    "rating": "90.10"
+  }
+]
