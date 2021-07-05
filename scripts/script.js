@@ -81,9 +81,10 @@ function fromLess (field) {
 
 [seasons, tableQuantity, goal, pass, goalsAndPass, rating].forEach((value) => {
   value.addEventListener('click', () => {
-    switcher.value = !switcher.value;
+    switcher[value.dataset.index] = !switcher[value.dataset.index];
+    console.log(switcher);
     getData('./db/data.json').then(data => {
-      if(switcher.value) {
+      if(switcher[value.dataset.index]) {
         data.sort(fromMore(value.dataset.index)).forEach(createTable)
       } else {
         data.sort(fromLess(value.dataset.index)).forEach(createTable)
