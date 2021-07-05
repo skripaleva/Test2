@@ -13,7 +13,7 @@ const tableRating  = document.querySelector('.table__rating');
 const navTrigger  = document.getElementById('nav_trigger');
 let clientWidth = document.documentElement.clientWidth;
 
-switcher = {
+let switcher = {
   seasons: false,
   tableQuantity: false,
   goal: false,
@@ -27,7 +27,7 @@ if (clientWidth <= 900) {
   tableGoal.innerText = 'Г';
   tablePass.innerText = 'П';
   tableGoalPass.innerText = 'Г+П';
-  tableRating.innerText = '';
+  tableRating.innerText = 'Р';
 }
 
 menu.addEventListener('scroll', () => {
@@ -37,6 +37,7 @@ menu.addEventListener('scroll', () => {
 
 const getData = async (url) => {
   let links = document.querySelectorAll('.table__line');
+
   if(links.length) {
     links.forEach(link => link.remove());
   }
@@ -55,7 +56,7 @@ const createTable = ({season, quantity, goals, pass, goalsAndPass, rating}) => {
     const tableLink = document.createElement('div');
     tableLink.classList.add('table__line');
     table.append(tableLink);
-    // console.log(tableLink);
+
     tableLink.innerHTML = `
       <div class="table__season">${season}</div>   
       <div class="table__col">${quantity}</div>
@@ -64,7 +65,6 @@ const createTable = ({season, quantity, goals, pass, goalsAndPass, rating}) => {
       <div class="table__col">${goalsAndPass}</div>
       <div class="table__col table__col_blue">${rating}</div>
     `;
-
 };
 
 getData('./db/data.json').then(data => {
@@ -82,7 +82,13 @@ function fromLess (field) {
 [seasons, tableQuantity, goal, pass, goalsAndPass, rating].forEach((value) => {
   value.addEventListener('click', () => {
     switcher[value.dataset.index] = !switcher[value.dataset.index];
-    console.log(switcher);
+
+    for (key in switcher ) {
+      if (key !== value.dataset.index) {
+        switcher[key] = false;
+      }
+    }
+
     getData('./db/data.json').then(data => {
       if(switcher[value.dataset.index]) {
         data.sort(fromMore(value.dataset.index)).forEach(createTable)
